@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title></title>
+    <title>正则表达式（部分）</title>
     <link href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/"/>
     <url>/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/</url>
     
     <content type="html"><![CDATA[<h1 id="正则表达式（部分）"><a href="#正则表达式（部分）" class="headerlink" title="正则表达式（部分）"></a>正则表达式（部分）</h1><p>d? d出现0&#x2F;1次  </p><p>a＊ a可以出现0&#x2F;多次  </p><p>a+ a出现一次以上  </p><p>a｛6｝ a出现6次  </p><p>a｛2，｝ a出现2次以上  </p><p>a｛2，6｝ a出现2-6次  </p><h2 id="匹配多个字符："><a href="#匹配多个字符：" class="headerlink" title="匹配多个字符："></a>匹配多个字符：</h2><p>(ab)+ ab出现一次以上  </p><h2 id="或运算："><a href="#或运算：" class="headerlink" title="或运算："></a>或运算：</h2><p>a (cat|dog) 匹配 a cat or a dog<br>a cat|dog 匹配 a cat or dog  </p><h2 id="字符类："><a href="#字符类：" class="headerlink" title="字符类："></a>字符类：</h2><p>匹配由abc构成的数据【abc】+ abc 出现一次以上 abc aabbcc  </p><p>【a-zA-Z0-9】 ABCabc123  </p><p>^ 排除 【^0-9】 匹配0-9之外的数据(包括换行符)  </p><h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>\d 数字字符 \d+ 匹配一个以上的数字  </p><p>\D 非数字字符  </p><p>\w 单词字符 单词 数字 下划线即英文字符  </p><p>\W 非单词字符  </p><p>\s 空白符 包含空格和换行符  </p><p>\S 非空白字符  </p><p>\b 单词的边界 单词的开头或结尾 单词与符号之前的边界  </p><p>\B 非单词的边界 符号与符号 单词与单词的边界  </p><p>. 任意字符不包含换行符  </p><p>\. 表示. 通过\进行了转意  </p><p>^ 匹配行首 $ 匹配行尾  </p><p>＊+｛｝贪婪匹配<br><strong><b><a href="https://www.wondershare/">https://www.wondershare</a>. com</strong></b>  </p><p>&lt;.+&gt; 会匹配整串 因为是贪婪匹配  </p><p>&lt;.+?&gt; 只匹配两个标签代码，➕? 设置为懒惰匹</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>tools</tag>
+      
+    </tags>
     
   </entry>
   
