@@ -1,0 +1,866 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/71F99186DE853565BD6D63B7E365DF93.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="hgame week2 re wpArithmetic [关于upx壳的一点认知，以及upx壳的特征识别 - 北北软件园 - 博客园 (cnblogs.com)](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiazai&#x2F;p&#x2F;14295684.html#:~:text&#x3D;一般是被识别出了upx的特征，然后直接再拖入到upx加壳器中，加壳器自己就可以识别出这是加过壳的，然后执行脱壳。 (upx加壳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/02/23/hgame%20week2%20re%20wp/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="hgame week2 re wpArithmetic [关于upx壳的一点认知，以及upx壳的特征识别 - 北北软件园 - 博客园 (cnblogs.com)](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiazai&#x2F;p&#x2F;14295684.html#:~:text&#x3D;一般是被识别出了upx的特征，然后直接再拖入到upx加壳器中，加壳器自己就可以识别出这是加过壳的，然后执行脱壳。 (upx加壳">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222130671.png">
+<meta property="og:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222221609409.png">
+<meta property="og:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222221806757.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222220743.png">
+<meta property="og:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222222423434.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222227317.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222227288.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402272350601.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402281332718.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232143280.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232142518.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232150169.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232211534.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232326490.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232328756.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232348608.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402240150190.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241834999.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241833507.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241820634.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241556639.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241950194.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241955465.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241629750.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241753192.png">
+<meta property="og:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240225012351759.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402251314330.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242116472.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242117762.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242118370.png">
+<meta property="article:published_time" content="2024-02-22T17:20:17.268Z">
+<meta property="article:modified_time" content="2024-02-28T10:19:09.366Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222130671.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"\\img\\A008779F61D12BE23A64C76080892F5C.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>wwzx&#39;blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-02-23 01:20" pubdate>
+          2024年2月23日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          22 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="hgame-week2-re-wp"><a href="#hgame-week2-re-wp" class="headerlink" title="hgame week2 re wp"></a>hgame week2 re wp</h1><h2 id="Arithmetic"><a href="#Arithmetic" class="headerlink" title="Arithmetic"></a>Arithmetic</h2><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222130671.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222213004584"></p>
+<p>[关于upx壳的一点认知，以及upx壳的特征识别 - 北北软件园 - 博客园 (cnblogs.com)](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiazai/p/14295684.html#:~:text=%E4%B8%80%E8%88%AC%E6%98%AF%E8%A2%AB%E8%AF%86%E5%88%AB%E5%87%BA%E4%BA%86upx%E7%9A%84%E7%89%B9%E5%BE%81%EF%BC%8C%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5%E5%86%8D%E6%8B%96%E5%85%A5%E5%88%B0upx%E5%8A%A0%E5%A3%B3%E5%99%A8%E4%B8%AD%EF%BC%8C%E5%8A%A0%E5%A3%B3%E5%99%A8%E8%87%AA%E5%B7%B1%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%AF%86%E5%88%AB%E5%87%BA%E8%BF%99%E6%98%AF%E5%8A%A0%E8%BF%87%E5%A3%B3%E7%9A%84%EF%BC%8C%E7%84%B6%E5%90%8E%E6%89%A7%E8%A1%8C%E8%84%B1%E5%A3%B3%E3%80%82">https://www.cnblogs.com/xiazai/p/14295684.html#:~:text=一般是被识别出了upx的特征，然后直接再拖入到upx加壳器中，加壳器自己就可以识别出这是加过壳的，然后执行脱壳。</a> (upx加壳器就可以脱自己加密出来的upx) upx的特征，我们可以通过抹掉特征码来隐藏 特征码处1：upx字符串，特征码为55 50 58 一般存在于区段名称这里%2C等字节长度随意替换，对程序没有任何影响 特征码处2%3Aoep前几个字节,%3F%3F %3F%3F 00 8D BE %3F%3F %3F%3F %3F%3F)</p>
+<p>upx特征码：55 50 58</p>
+<p>首先，我们来讲一讲查壳的原理。不论是压缩壳，还是加密壳，都有特定的算法。加同种壳的不同应用程序，有一部分机器码是相同的，它们被称为“签名”或者“特征码”。有些壳还会将自身的一些信息写入可执行程序。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/whatday/article/details/99709317?app_version=6.2.8&code=app_1562916241&csdn_share_tail=%7B%22type%22:%22blog%22,%22rType%22:%22article%22,%22rId%22:%2299709317%22,%22source%22:%222301_79688961%22%7D&uLinkId=usr1mkqgl919blen&utm_source=app">手动去upx特征_upx -d-CSDN博客</a></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222221609409.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222221609409"></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222221806757.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222221806757"></p>
+<p>对比，改成upx特征码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222220743.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222222044654"></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240222222423434.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222222423434"></p>
+<p>然后保存文件，再次查壳发现文件由最开始的upx3.91+变成了upx3.96</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222227317.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222222701283"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402222227288.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240222222727256"></p>
+<p>打开发现是这样的（部分）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402272350601.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240227235023536"></p>
+<p>按照次规律下去，在最后一行第500行应该有500个数，只不过因为显示问题没用呈三角形排列</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402281332718.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240228133245628"></p>
+<p>点开查看dword_1400048B0,发现和1400048B4是连续的</p>
+<p>所以可以判断得到路径：</p>
+<p>若为1则加正下⽅的数，若为2则加右下⽅的数</p>
+<p>v10为由⾸层加⾄末层的路径值的和 </p>
+<p>路径和&gt;&#x3D;6752833的路径求md5即可得到路径</p>
+<h5 id="exp"><a href="#exp" class="headerlink" title="exp:"></a>exp:</h5><p>#include &lt;bits&#x2F;stdc++.h&gt;<br>#include &lt;time.h&gt;<br>#define MAX 6752833</p>
+<p>using namespace std;</p>
+<p>long a[500][500], f[510][510], last[510][510], lis[510];<br>int path[510];</p>
+<p>int main()<br>{<br>    srand(time(NULL));<br>    int x &#x3D; 1, y &#x3D; 1;<br>    FILE *fp &#x3D; fopen(“out”, “rb”);</p>
+<pre><code class="hljs">while (fscanf(fp, &quot;%d&quot;, &amp;a[x][y]) != EOF)
+&#123;
+    if (x == y)//这个条件检查当前读取的位置是否位于数字金字塔的对角线上
+    &#123;
+        y = 1;//将 y 重置为 1，表示转到下一行的第一个位置
+        x++;//将 x 增加 1，表示转到下一行
+        continue;
+    &#125;
+    y++;//当数字金字塔的位置不在对角线上时，将 y 增加 1，表示继续读取当前行的下一个位置的数字
+&#125;
+x--;//在整个循环结束后，将 x 减去 1，因为在最后一次循环中，x 已经增加了一个额外的值，超过了实际的行数
+
+f[1][1] = a[1][1];
+
+for (int i = 2; i &lt;= x; i++)
+&#123;
+    for (int j = 1; j &lt;= i; j++)
+    &#123;
+        f[i][j] = f[i - 1][j] + a[i][j];
+        last[i][j] = j;
+        if (f[i - 1][j - 1] + a[i][j] &gt;= f[i][j])
+        &#123;
+            f[i][j] = f[i - 1][j - 1] + a[i][j];
+            last[i][j] = j - 1;
+        &#125;
+    &#125;
+&#125;//这部分代码使用动态规划的方法计算出从金字塔的顶部到每个位置的最大路径和。f[i][j] 表示从顶部到第 i 行第 j 列的最大路径和，last[i][j] 记录在计算最大路径和时选择的路径
+
+for (int i = 1; i &lt;= x; i++)
+&#123;
+    if (f[x][i] == 6752833)
+    &#123;
+        x = 500, y = i;
+        while (x &gt; 1)
+        &#123;
+            lis[x] = a[x][y];
+            if (last[x][y] == y - 1)
+            &#123;
+                path[x] = 2;
+                y = y - 1;
+            &#125;
+            else
+            &#123;
+                path[x] = 1;
+            &#125;
+            x--;
+        &#125;
+    &#125;
+&#125;
+
+for (int i = 2; i &lt;= 500; i++)
+&#123;
+    printf(&quot;%d&quot;, path[i]);
+&#125;
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>hgame{934f7f68145038b3b81482b3d9f3a355}</p>
+<h2 id="babyre"><a href="#babyre" class="headerlink" title="babyre"></a>babyre</h2><p>需要掌握：</p>
+<p>1.ELF（Executable and Linkable Format）是一种常见的可执行文件和目标文件格式。在 ELF 文件中，有一个叫做 <strong>.init_array</strong> 的节（section），用于存放程序的初始化函数（init function）的地址。这些初始化函数会在程序执行之前被自动调用，用于执行一些必要的初始化工作。</p>
+<p>.init_array 节中存放着一系列函数指针，这些函数指针指向程序中需要在加载时执行的初始化函数。操作系统在加载 ELF 文件时会依次调用这些初始化函数，确保程序的各个部分都得到正确的初始化。</p>
+<p>需要注意的是，.init_array 节中的初始化函数的执行顺序是按照它们在节中的出现顺序来确定的。因此，开发者在编写这些初始化函数时需要考虑它们之间的依赖关系，以确保程序能够正确地初始化。</p>
+<p>2.特定库&lt;pthread.h&gt;</p>
+<p>​	部分函数：</p>
+<p><strong>sem_wait() 函数</strong>:</p>
+<ul>
+<li>当一个线程调用 sem_wait() 函数时，它会试图获取一个信号量。如果信号量的值大于 0，表示有可用的资源，那么该线程将继续执行，并且信号量的值会减 1。</li>
+<li>如果信号量的值为 0，表示当前没有可用的资源，那么调用 sem_wait() 的线程会被挂起（阻塞），直到有其他线程调用 sem_post() 来增加信号量的值。</li>
+</ul>
+<p><strong>sem_post() 函数</strong>:</p>
+<ul>
+<li>当一个线程调用 sem_post() 函数时，它会释放一个资源，并将信号量的值加 1。</li>
+<li>如果此时有其他线程正在等待该信号量（即信号量的值为 0），则会有一个或多个线程从 sem_wait() 中返回，并继续执行其后续操作。</li>
+</ul>
+<p>总的来说，信号量提供了一种线程间同步和互斥的机制，允许线程之间协调共享资源的访问。sem_wait() 用于等待资源的获取，并在获取到资源时继续执行，而在资源不可用时被挂起；sem_post() 用于释放资源，以便其他线程可以继续执行。这样，通过信号量的使用，可以有效地控制并发线程对共享资源的访问，避免竞态条件和数据不一致的问题。</p>
+<h5 id="signal-8-handler-：这行代码用于设置信号处理函数。signal-函数用于注册信号处理函数，其中第一个参数表示信号编号，这里是-8（通常用于处理程序错误）。第二个参数是信号处理函数的地址，即-handler"><a href="#signal-8-handler-：这行代码用于设置信号处理函数。signal-函数用于注册信号处理函数，其中第一个参数表示信号编号，这里是-8（通常用于处理程序错误）。第二个参数是信号处理函数的地址，即-handler" class="headerlink" title="signal(8, handler) ：这行代码用于设置信号处理函数。signal 函数用于注册信号处理函数，其中第一个参数表示信号编号，这里是 8（通常用于处理程序错误）。第二个参数是信号处理函数的地址，即 handler"></a>signal(8, handler) ：这行代码用于设置信号处理函数。<code>signal</code> 函数用于注册信号处理函数，其中第一个参数表示信号编号，这里是 8（通常用于处理程序错误）。第二个参数是信号处理函数的地址，即 <code>handler</code></h5><p>使用：</p>
+<ul>
+<li><h6 id="sem-init-adress，0，初值-初始化信号值"><a href="#sem-init-adress，0，初值-初始化信号值" class="headerlink" title="sem_init(adress，0，初值)        初始化信号值"></a>sem_init(adress，0，初值)        初始化信号值</h6></li>
+<li><h6 id="pthread-create-adress，0，函数，0-创建线程"><a href="#pthread-create-adress，0，函数，0-创建线程" class="headerlink" title="pthread_create(adress，0，函数，0)           创建线程"></a>pthread_create(adress，0，函数，0)           创建线程</h6></li>
+<li><h6 id="sem-wait-adress-等待信号值，一旦信号值不为0，则信号值立马减一并返回，若信号值为0则阻塞线程的进行"><a href="#sem-wait-adress-等待信号值，一旦信号值不为0，则信号值立马减一并返回，若信号值为0则阻塞线程的进行" class="headerlink" title="sem_wait(adress)        等待信号值，一旦信号值不为0，则信号值立马减一并返回，若信号值为0则阻塞线程的进行"></a>sem_wait(adress)        等待信号值，一旦信号值不为0，则信号值立马减一并返回，若信号值为0则阻塞线程的进行</h6></li>
+<li><h6 id="sem-post-adress-信号值加一"><a href="#sem-post-adress-信号值加一" class="headerlink" title="sem_post(adress)      信号值加一"></a>sem_post(adress)      信号值加一</h6></li>
+<li><h6 id="pthread-join-ptr-0LL-暂停现行线程，直到指定线程运行完毕"><a href="#pthread-join-ptr-0LL-暂停现行线程，直到指定线程运行完毕" class="headerlink" title="pthread_join(*(&amp;ptr ), 0LL)   暂停现行线程，直到指定线程运行完毕"></a>pthread_join(*(&amp;ptr ), 0LL)   暂停现行线程，直到指定线程运行完毕</h6></li>
+</ul>
+<p>3.进程</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html">进程与线程的一个简单解释 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+<p>4.浮点异常</p>
+<ul>
+<li>试图将一个数除以0</li>
+<li>试图对负数取平方根</li>
+<li>试图对负数取对数</li>
+<li>浮点数溢出或下溢（例如，结果太大或太小无法表示）</li>
+</ul>
+<p>​		在这种情况下，程序会收到一个 SIGFPE 信号并终止执行</p>
+<p>做题：修改变量名后</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232143280.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223214302243"></p>
+<p>进入输入函数，可知 dword_41C0为输入input，点开后发现地址与4240连续，即输入32个字节，第33个字节被设置为249</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232142518.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223214236445"></p>
+<p>进入func1，如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232150169.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223215051132"></p>
+<p>用8.3 IDA远调 注意用同一个版本的server，不然就会报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232211534.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223221128486"></p>
+<p>调试</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232326490.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223232657455"></p>
+<p>调试到第四次，F8步过的时候，发生浮点异常</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232328756.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223232802732"></p>
+<p>对于<img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402232348608.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240223234814579"></p>
+<p>这段代码的作用是设置一个信号处理函数 <code>handler</code>，然后在执行关键代码之前，检查是否是第一次执行，如果是则注册信号处理函数，并进行数组元素异或操作。这样，在执行关键代码期间，如果产生了信号（例如，程序错误），会跳转到注册的信号处理函数进行相应的处理，所以最后得到字符串wtxfei</p>
+<p>然后就是注意看清楚循环结构，一次循环会执行完1,2,3,4四个线程</p>
+<h4 id="exp-1"><a href="#exp-1" class="headerlink" title="exp:"></a>exp:</h4><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402240150190.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224015018099"></p>
+<p>hgame{you_are_3o_c1ever2_3Olve!}</p>
+<h2 id="babyAndroid"><a href="#babyAndroid" class="headerlink" title="babyAndroid"></a>babyAndroid</h2><p>主要逻辑</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241834999.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224183444916"></p>
+<p>注意此时双击key获取的是key的资源id而不是key的值</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241833507.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224183354420"></p>
+<p>最初在下图中可得知经过加密后的数据如最下方check函数，发现是RC4加密</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241820634.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224182056478"></p>
+<p>接下来就是获取key（正确打开方式）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">3e1fel<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241556639.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload></p>
+<p>使用工具解密，注意要将数据进行处理变为16进制，我们会发现得到的数据里面包含了负数</p>
+<p>对于负数的转换，常用的方法是使用补码表示法。以下是将负数转换为十六进制的步骤：</p>
+<ol>
+<li>将负数的绝对值转换为二进制表示。例如，-75 的绝对值是 75，其二进制表示为 1001011。</li>
+<li>如果二进制表示不足 8 位，需要在左侧填充零，使其达到 8 位长度。在这种情况下，补充前导零使二进制表示为 01001011。</li>
+<li>取该二进制数的按位取反。对于 01001011，按位取反后为 10110100。</li>
+<li>将按位取反后的二进制数加 1。对于 10110100，加 1 后为 10110101。</li>
+<li>将得到的补码转换为十六进制表示。10110101 转换为十六进制表示为 0xB5。</li>
+</ol>
+<p>因此，-75 的十六进制表示为 0xB5。同样的方法可以应用于其他负数的转换。</p>
+<p>按照以上方法，所以处理后得到的数据为 0xB5 0x50 0x50 0x30 0xA8 0x4B 0x67 0xD3 0xA5 0x59 0xC4 0x5B 0xCA 0x05 0x06 0xB8，去空格，替换小写后得 G&gt;IkH&lt;aHu5FE3GSV</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241950194.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224195057092"></p>
+<p>（不知道为什么拿cyberchef解出来不对）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241955465.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload></p>
+<p>apk改后缀名为zip解压后在lib里面找到so文件，然后在native层</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241629750.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224162921712"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402241753192.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224175313128"></p>
+<p>点开函数发现是AES（可使用findcrypt判断）</p>
+<p>得到加密数据</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240225012351759.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240225012351759"></p>
+<p>（在汇编语言中，<code>DCB</code> 是 “Define Constant Byte” 的缩写，用于声明一个或多个字节常量。每个 <code>DCB</code> 指令后面跟随着一系列以逗号分隔的字节值。）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402251314330.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240225131403217"></p>
+<h2 id="ezcpp"><a href="#ezcpp" class="headerlink" title="ezcpp"></a>ezcpp</h2><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242116472.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224211649383"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242117762.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224211719667"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202402242118370.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240224211802299"></p>
+<p>总的加密逻辑就这样，逆回去就行了（这个题因为数据是一样的但是我以为不一样，看wp看了半天最后知道是一样的……深深的伤透了我的心……）</p>
+<p>循环四次，从后面往前面，八个字节为一组</p>
+<h5 id="exp："><a href="#exp：" class="headerlink" title="exp："></a>exp：</h5><p>#include&lt;bits&#x2F;stdc++.h&gt;<br> using namespace std;<br> void decrypt(uint32_t* v, uint32_t* k)<br> {<br>   uint32_t v0 &#x3D; v[0], v1 &#x3D; v[1];<br>   uint32_t delta &#x3D; 0xdeadbeef, sum &#x3D; delta * 32;<br>   for (int i &#x3D; 0; i &lt; 32; i++)<br>   {<br>     v1 -&#x3D; (v0 + sum) ^ (k[2] + (v0 &lt;&lt; 4)) ^ (k[3] + (v0 &lt;&lt; 5));<br>     v0 -&#x3D; (v1 + sum) ^ (k[0] + (v1 &lt;&lt; 4)) ^ (k[1] + (v1 &lt;&lt;5));<br>     sum -&#x3D; delta;<br>   }<br>   v[0] &#x3D; v0, v[1] &#x3D; v1;<br> }</p>
+<p> int main()<br> {<br>   uint32_t key[] &#x3D; {1234,2341,3412,4123};<br>   unsigned char cipher[] &#x3D; {0x88, 0x04, 0xC6, 0x6A, 0x7F, 0xA7, 0xEC, 0x27, 0x6E, 0xBF, 0xB8, 0xAA, 0x0D, 0x3A, 0xAD, 0xE7, 0x7E, 0x52, 0xFF, 0x8C, 0x8B, 0xEF, 0x11, 0x9C, 0x3D, 0xC3, 0xEA, 0xFD, 0x23, 0x1F, 0x71, 0x4D };<br>   decrypt((uint32_t *)&amp;cipher[24], key);<br>   decrypt((uint32_t *)&amp;cipher[16], key);<br>   decrypt((uint32_t *)&amp;cipher[8], key);<br>   decrypt((uint32_t *)&amp;cipher[0], key);<br>   printf(“%s”, cipher);</p>
+<p> }</p>
+<p>hgame</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2024/02/23/hgame week2 re wp/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/24/hagme%20week3%20RE%20wp/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" title="正则表达式（部分）">
+                        <span class="hidden-mobile">正则表达式（部分）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

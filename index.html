@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>Hexo</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"\\img\\A008779F61D12BE23A64C76080892F5C.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -68,6 +70,33 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -180,13 +209,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/3B930AB0F06BAE52E4DF4B7D4CA9D7B2.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/067EB2AC37CE6F2C9EDBD84BCBEDE7CE.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="wwzx&#39;blog"></span>
+            <span id="subtitle" data-typed-text="wwzx blog"></span>
           
         </div>
 
@@ -221,7 +250,91 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/02/24/hagme%20week3%20RE%20wp/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/24/hagme%20week3%20RE%20wp/" target="_self">
+          
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/02/24/hagme%20week3%20RE%20wp/" target="_self">
+        <div>
+          hagme week3 RE wpmystery用ida打开题目发现main函数界面只有ptrace反调试函数，搜索字符串可定位  用7打开大概是这样的（wp上那种）   用8开会好看很多，即主要逻辑（可直接通过字符串定位）  可以看到这里两个函数都有unk_4080 交叉引用  打开func2，因为题目为elf文件，发现func2在初始化函数里面，可以得知rc4加密的密钥在初始化时被修改  所以
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-24 20:43" pubdate>
+              2024-02-24
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/02/23/hgame%20week2%20re%20wp/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/23/hgame%20week2%20re%20wp/" target="_self">
+          
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/02/23/hgame%20week2%20re%20wp/" target="_self">
+        <div>
+          hgame week2 re wpArithmetic [关于upx壳的一点认知，以及upx壳的特征识别 - 北北软件园 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiazai/p/14295684.html#:~:text=一般是被识别出了upx的特征，然后直接再拖入到upx加壳器中，加壳器自己就可以识别出这是加过壳的，然后执行脱壳。 (upx加壳
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-23 01:20" pubdate>
+              2024-02-23
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="正则表达式（部分）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" target="_self">
@@ -230,7 +343,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" target="_self">
+      <a class="index-excerpt " href="/2024/02/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" target="_self">
         <div>
           正则表达式（部分）d? d出现0&#x2F;1次   a＊ a可以出现0&#x2F;多次   a+ a出现一次以上   a｛6｝ a出现6次   a｛2，｝ a出现2次以上   a｛2，6｝ a出现2-6次   匹配多个字符：(ab)+ ab出现一次以上   或运算：a (cat|dog) 匹配 a cat or a dog   a cat|dog 匹配 a cat or dog   字符类：匹配
         </div>
@@ -261,7 +374,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/02/19/zoomeye/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="zoomeye">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2024/02/19/zoomeye/" target="_self">
@@ -270,7 +389,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/19/zoomeye/" target="_self">
+      <a class="index-excerpt " href="/2024/02/19/zoomeye/" target="_self">
         <div>
           zoomeye.md应该最突出的就是首页的搜索引擎 https://www.zoomeye.org/profile/domain 用处：可以查询域名&#x2F;IP关联信息，也可以查询子域名信息，并且支持TXT和Json 格式导出 生活篇：右上方个人的界面中，在数据订阅界面可以添加特定ip进行订阅，可以通过将自己的关注对象添加到订阅列表里面而避免查看众多网页。 ZoomEye可以记录的具体IP地址
         </div>
@@ -301,7 +420,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/02/05/cmake%E7%AC%94%E8%AE%B0/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="cmake笔记">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2024/02/05/cmake%E7%AC%94%E8%AE%B0/" target="_self">
@@ -310,7 +435,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/05/cmake%E7%AC%94%E8%AE%B0/" target="_self">
+      <a class="index-excerpt " href="/2024/02/05/cmake%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
           cmake说明cmake的定义是什么 ？—–高级编译配置工具 当多个人用不同的语言或者编译器开发一个项目，最终要输出一个可执行文件或者共享库（dll，so等等）这时候神器就出现了—–CMake！ 所有操作都是通过编译CMakeLists.txt来完成的—简单 官 方网站是 www.cmake.org，可以通过访问官方网站获得更多关于 cmake 的信息 学习CMake的目的，为将来处理大型的C&#
         </div>
@@ -341,7 +466,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/12/18/%E6%9E%81%E5%AE%A2wp-1/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="极客wp">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2023/12/18/%E6%9E%81%E5%AE%A2wp-1/" target="_self">
@@ -350,7 +481,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/12/18/%E6%9E%81%E5%AE%A2wp-1/" target="_self">
+      <a class="index-excerpt " href="/2023/12/18/%E6%9E%81%E5%AE%A2wp-1/" target="_self">
         <div>
           极客wp点击就送的逆向题发现文件后缀名是.s gcc命令其实依次执行了四步操作： 1.预处理(Preprocessing) 2.编译(Compilation), 3.汇编(Assemble), 4.链接(Linking)。 GCC编译过程（预处理-&gt;编译-&gt;汇编-&gt;链接） - 知乎 (zhihu.com) 通过上述内容发现还需要先将汇编代码.s变成机器码.o，生成目标文件 在虚拟
         </div>
@@ -381,7 +512,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/12/18/hello-world/" target="_self">
+          <img src="/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Hello World">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
         <a href="/2023/12/18/hello-world/" target="_self">
@@ -390,7 +527,7 @@
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/12/18/hello-world/" target="_self">
+      <a class="index-excerpt " href="/2023/12/18/hello-world/" target="_self">
         <div>
           Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
         </div>
