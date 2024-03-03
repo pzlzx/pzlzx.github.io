@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>2024第一周学习笔记</title>
+    <link href="/2024/03/03/2024%20%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2024/03/03/2024%20%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2024-第一周学习笔记"><a href="#2024-第一周学习笔记" class="headerlink" title="2024 第一周学习笔记"></a>2024 第一周学习笔记</h1><p>壳：分为两种，一种是压缩壳1，一种是加密壳</p><p>用IDA打开加壳后的文件</p><p>使用 IDA 打开时会提示 <code>Some imported modules will not be visible because the IAT is located outside of memory range of the input file.</code></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031724361.png" alt="img"></p><h2 id="手动脱壳三种方法："><a href="#手动脱壳三种方法：" class="headerlink" title="手动脱壳三种方法："></a>手动脱壳三种方法：</h2><h3 id="1-单步跟踪法"><a href="#1-单步跟踪法" class="headerlink" title="1.单步跟踪法"></a>1.单步跟踪法</h3><h5 id="原则：向上的跳转，不执行，向下的跳转执行，灰色的不用管"><a href="#原则：向上的跳转，不执行，向下的跳转执行，灰色的不用管" class="headerlink" title="原则：向上的跳转，不执行，向下的跳转执行，灰色的不用管"></a>原则：向上的跳转，不执行，向下的跳转执行，灰色的不用管</h5><p>单步运行程序，当发现程序向下运行时有向上跳转的箭头时，在程序的下一步（即下一行）设置断点，然后不进行向上的跳转</p><p>步骤：</p><p>法一：右键选中，断点–&gt;运行到选定位置（F4）</p><p>法二：右键选中，断点–&gt;切换，然后运行，最后再点击切换来取消这个断点</p><p>注意：</p><p>当此时下一行的指令还是跳转时(JZ JNZ CALL)，则继续选择下一行进行跳转</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031533234.png" alt="image-20240303153301086"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031450046.png"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031538280.png" alt="image-20240303153848169"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031540308.png" alt="image-20240303154057257"></p><p>脱壳方式有两种：一种是使用od插件ollydump，另一种是使用工具lordpe</p><p>od插件又有两种，一种是方式一，一种是方式二</p><p>进入OEP，可以进行脱壳了</p><p>使用ollydump脱壳调试进程</p><p>lordpe:（这个看上去好像有点麻烦，浅记一下）</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031547434.png" alt="image-20240303154743390"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031550982.png" alt="image-20240303155052911"></p><p>查看相对基址（上图中的OEP）可以使用下图方法，点击后在修正值处的值就是我们所需要的OEP的值</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031550212.png" alt="image-20240303155015170"></p><h2 id="2-一步直达法"><a href="#2-一步直达法" class="headerlink" title="2.一步直达法"></a>2.一步直达法</h2><p>说明：适用于绝大部分的upx壳和aspack壳</p><p>进入OD，使用Ctrl+F搜索出popad（搜索时不要勾选”整个块“这个选项），然后使用跳转，跳转到此处，然后F8进入OEP，开始使用ollydump脱壳</p><h2 id="3-ESP定律脱壳"><a href="#3-ESP定律脱壳" class="headerlink" title="3.ESP定律脱壳"></a>3.ESP定律脱壳</h2><p>使用快捷键F8，单步一次，发现只有ESP寄存器是红的，就可以使用ESP定律</p><p>右键选择数据窗口跟随，设置断点</p><p>F9运行</p><p>F8进入OEP，此处如果是push ebp,就是进入了OEP</p><p>开始使用OD的插件脱壳</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031507844.png" alt="image-20240303150734726"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031508296.png" alt="image-20240303150833144"></p><p>这个地方设置断点的时候dword和word都一样</p><h2 id="4-内存镜像法"><a href="#4-内存镜像法" class="headerlink" title="4.内存镜像法"></a>4.内存镜像法</h2><p>右上角点击查看–&gt;内存</p><p>找程序出现的第一个rsrc</p><p>总结：</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031611904.png" alt="image-20240303161111876"></p><p><a href="https://blog.csdn.net/sirrior/article/details/134597589">upx手动脱壳学习笔记_如何使用upx脱壳-CSDN博客</a></p><p><a href="https://blog.csdn.net/m0_46296905/article/details/116049504">UPX手动脱壳-CSDN博客</a></p><h2 id="使用bindiff对去符号化题目进行处理报错处理"><a href="#使用bindiff对去符号化题目进行处理报错处理" class="headerlink" title="使用bindiff对去符号化题目进行处理报错处理"></a>使用bindiff对去符号化题目进行处理报错处理</h2><p>打开文件</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031653064.JPG" alt="FF1F28C59D5D07660321030BB8F66733"></p><p>据说最开始第一个报错没有什么具体影响</p><p>但是第二个报错有，会影响接下来对文件的分析</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031651240.png" alt="image-20240302115416240"></p><p>网上好像也没有找到相应的解决办法，最后试了很久找到两个方法：</p><p>法一：</p><p>手动拖动，按下import symbols</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031657326.png" alt="img"></p><p>然后在一旁的汇编框内按下f5</p><p>法二：</p><p>尝试更换bindiff的插件，bindiff</p><p>BinDiff 7 通常与 IDA Pro 7.x 版本兼容，7的版本似乎只适用于IDA7.6，在github上面重新下载一个Bindiff，然后在</p><p>C:\Users\asus\AppData\Roaming\Hex-Rays\IDA Pro\plugins下替换掉原来的Bindiff插件（放在一个公共插件存放的位置）</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403031708317.png" alt="image-20240303170808277"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>RE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hagme week3 RE wp</title>
     <link href="/2024/02/24/hagme%20week3%20RE%20wp/"/>
     <url>/2024/02/24/hagme%20week3%20RE%20wp/</url>
