@@ -24,9 +24,9 @@
 <meta property="og:description" content="PE文件的块PE文件使用的是一个平面的地址空间，所有的代码和数据都被合并在一起，组成一个很大的结构，文件的内容被分为很多的块，块中包含代码和数据，在排列位置上，在PE文件的DOS头部和PE文件头之后就是块表和多个不同的块，（Section,又称为节，区块，区段） Windows是如何将PE文件映射到内存中的：在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403052057177.png">
-<meta property="og:image" content="https://img-blog.csdn.net/20151218122416073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403052059827.jpeg">
 <meta property="article:published_time" content="2024-03-05T12:05:59.253Z">
-<meta property="article:modified_time" content="2024-03-05T12:57:53.521Z">
+<meta property="article:modified_time" content="2024-03-05T12:59:54.004Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="RE">
 <meta name="twitter:card" content="summary_large_image">
@@ -347,7 +347,7 @@
 <p>IMAGE_IMPORT_DESCRIPOR STRUCT ENDS}</p>
 <p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403052057177.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240304223655245"></p>
 <p>OriginalFirstThunk 与FirstThunk非常相似，它们指向两个本质上相同的IMAGE_THUNK_DATA的结构的数组。一般来说，OriginalFirstThunk 指向的 IMAGE_THUNK_DATA的结构数据称为输入名称表，（Import Name Table—-INT),FirstThunk指向的数据结构数组称为输入地址表（Import Address Table–IAT)</p>
-<p><img src="https://img-blog.csdn.net/20151218122416073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403052059827.jpeg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="img"></p>
 <p>IMAGE_THUNK_DATA结构的数组中，每个元素对应于一个从可执行文件输入的函数，数组结构的结束也是通过一个全为0的元素作为标识。</p>
 <p>在IMAGE_THUNK_DATA中的ForwarderString指向一个转向字符的RVA值，Function是被输入函数的内存地址，ordinal是被输入函数的API的序数值，AddressOfData指向IMAGE_IMPORT_BY_NAME</p>
 <p>ordinal和addressofdata什么时候使用？</p>
