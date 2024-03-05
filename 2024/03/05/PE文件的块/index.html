@@ -16,28 +16,27 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2023-2024 上学期寒假假期学习总结这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境假期IDA寄了一下，然后搞了7.6，7.7，8.3的IDA,当时是做begin">
+    <meta name="description" content="PE文件的块PE文件使用的是一个平面的地址空间，所有的代码和数据都被合并在一起，组成一个很大的结构，文件的内容被分为很多的块，块中包含代码和数据，在排列位置上，在PE文件的DOS头部和PE文件头之后就是块表和多个不同的块，（Section,又称为节，区块，区段） Windows是如何将PE文件映射到内存中的：在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2023-2024 上学期寒假假期学习总结">
-<meta property="og:url" content="http://example.com/2024/03/04/2023-2024%20%E4%B8%8A%E5%AD%A6%E6%9C%9F%E5%AF%92%E5%81%87%E5%81%87%E6%9C%9F%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="PE文件的块">
+<meta property="og:url" content="http://example.com/2024/03/05/PE%E6%96%87%E4%BB%B6%E7%9A%84%E5%9D%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2023-2024 上学期寒假假期学习总结这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境假期IDA寄了一下，然后搞了7.6，7.7，8.3的IDA,当时是做begin">
+<meta property="og:description" content="PE文件的块PE文件使用的是一个平面的地址空间，所有的代码和数据都被合并在一起，组成一个很大的结构，文件的内容被分为很多的块，块中包含代码和数据，在排列位置上，在PE文件的DOS头部和PE文件头之后就是块表和多个不同的块，（Section,又称为节，区块，区段） Windows是如何将PE文件映射到内存中的：在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041755958.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041755565.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041759478.png">
-<meta property="article:published_time" content="2024-03-04T10:26:38.813Z">
-<meta property="article:modified_time" content="2024-03-04T10:24:16.062Z">
+<meta property="og:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240304223655245.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20151218122416073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="article:published_time" content="2024-03-05T12:05:59.253Z">
+<meta property="article:modified_time" content="2024-03-05T12:12:34.525Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="学习记录">
+<meta property="article:tag" content="RE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041755958.png">
+<meta name="twitter:image" content="c:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240304223655245.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>2023-2024 上学期寒假假期学习总结 - Hexo</title>
+  <title>PE文件的块 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -230,7 +229,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="2023-2024 上学期寒假假期学习总结"></span>
+            <span id="subtitle" data-typed-text="PE文件的块"></span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-04 18:26" pubdate>
-          2024年3月4日 晚上
+        <time datetime="2024-03-05 20:05" pubdate>
+          2024年3月5日 晚上
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.9k 字
         
       </span>
     
@@ -264,7 +263,7 @@
         
         
         
-          9 分钟
+          16 分钟
         
       </span>
     
@@ -309,30 +308,59 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">2023-2024 上学期寒假假期学习总结</h1>
+            <h1 id="seo-header">PE文件的块</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="2023-2024-上学期寒假假期学习总结"><a href="#2023-2024-上学期寒假假期学习总结" class="headerlink" title="2023-2024 上学期寒假假期学习总结"></a>2023-2024 上学期寒假假期学习总结</h1><h5 id="这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，"><a href="#这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，" class="headerlink" title="这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，"></a>这个假期先是学习了下linux的指令（参考韩顺平b站课程），没有特别多的实操，常用指令还是可以了，</h5><h5 id="java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境"><a href="#java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境" class="headerlink" title="java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境"></a>java看课看了大概50节（总共900多节……嘶），感觉看了就是看了，之前其实上学的时候大概十一月吧浅看过的，当时速通了一晚上起来感觉还是要实践一下才行，害，安卓！然后配了下相应环境</h5><h5 id="假期IDA寄了一下，然后搞了7-6，7-7，8-3的IDA-当时是做begin-ctf的那个xor题发现字符串无法显示，换了很多版本开都不太行，有点影响对程序里面加密函数的追踪了，然后就想着把这个问题解决了（后来看其他人是一直交叉引用找到main函数还是啥），看了一部分wp好像就是说那个题目最好拿8-3的开，但是当时还是不知道，在网上把方法那些都试过了还是不太行。"><a href="#假期IDA寄了一下，然后搞了7-6，7-7，8-3的IDA-当时是做begin-ctf的那个xor题发现字符串无法显示，换了很多版本开都不太行，有点影响对程序里面加密函数的追踪了，然后就想着把这个问题解决了（后来看其他人是一直交叉引用找到main函数还是啥），看了一部分wp好像就是说那个题目最好拿8-3的开，但是当时还是不知道，在网上把方法那些都试过了还是不太行。" class="headerlink" title="假期IDA寄了一下，然后搞了7.6，7.7，8.3的IDA,当时是做begin ctf的那个xor题发现字符串无法显示，换了很多版本开都不太行，有点影响对程序里面加密函数的追踪了，然后就想着把这个问题解决了（后来看其他人是一直交叉引用找到main函数还是啥），看了一部分wp好像就是说那个题目最好拿8.3的开，但是当时还是不知道，在网上把方法那些都试过了还是不太行。"></a>假期IDA寄了一下，然后搞了7.6，7.7，8.3的IDA,当时是做begin ctf的那个xor题发现字符串无法显示，换了很多版本开都不太行，有点影响对程序里面加密函数的追踪了，然后就想着把这个问题解决了（后来看其他人是一直交叉引用找到main函数还是啥），看了一部分wp好像就是说那个题目最好拿8.3的开，但是当时还是不知道，在网上把方法那些都试过了还是不太行。</h5><p>也收获了一些经验（虽然解决不了当时那个问题）：</p>
-<p>1.多试几个版本的IDA开，一个不行换另外一个</p>
-<p>2.重新开机</p>
-<p>3.点一下这几个dll<img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041755958.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="4B43930D53D2B5C0047D7799A56D7E52"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041755565.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="CC5EC185CA4FBF54A9D6797C916DBAAE"></p>
-<p>4.把IDA里面的字体设置(options–&gt;general–&gt;strings)的UTF-8换成CP936,在字符串界面全选后右键rebuild,然后左下角</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403041759478.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240304175943442"></p>
-<p>然后再次全选rebuild，然后就出来了</p>
-<h5 id="西湖论剑看了看题，还未复现，复现有一点点卡"><a href="#西湖论剑看了看题，还未复现，复现有一点点卡" class="headerlink" title="西湖论剑看了看题，还未复现，复现有一点点卡"></a>西湖论剑看了看题，还未复现，复现有一点点卡</h5><h5 id="对着b站的课又学了下汇编，发现自己以前对汇编部分的指令的理解出现了一些偏差，算是复习"><a href="#对着b站的课又学了下汇编，发现自己以前对汇编部分的指令的理解出现了一些偏差，算是复习" class="headerlink" title="对着b站的课又学了下汇编，发现自己以前对汇编部分的指令的理解出现了一些偏差，算是复习"></a>对着b站的课又学了下汇编，发现自己以前对汇编部分的指令的理解出现了一些偏差，算是复习</h5><p>花指令：</p>
-<p>xor ebx,ebx </p>
-<p>test ebx </p>
-<p>jz label1 </p>
-<p>jnz label2 </p>
-<p>由于上一步已经将EBX设为0，所以ZF标志位会被设置。因此，接着执行”jz label1”指令，跳转到label1处</p>
-<h5 id="beginctf做了一些题（未复现完，第一次做vm），搞了下真机调试"><a href="#beginctf做了一些题（未复现完，第一次做vm），搞了下真机调试" class="headerlink" title="beginctf做了一些题（未复现完，第一次做vm），搞了下真机调试"></a>beginctf做了一些题（未复现完，第一次做vm），搞了下真机调试</h5><h5 id="hgame-week2-和-week3-复现，感觉还是写的比较详细吧"><a href="#hgame-week2-和-week3-复现，感觉还是写的比较详细吧" class="headerlink" title="hgame week2 和 week3 复现，感觉还是写的比较详细吧"></a>hgame week2 和 week3 复现，感觉还是写的比较详细吧</h5><h5 id="博客重新整了一下，因为距第一次上传太久了，后面惊讶发现自己上传文章以后在博客网页点开文章后显示页面不存在，后面发现是因为md文章里面标题的名字大小写和md文章本身名字不一样，然后注意最上方加粗的格式里面的冒号不是中文的"><a href="#博客重新整了一下，因为距第一次上传太久了，后面惊讶发现自己上传文章以后在博客网页点开文章后显示页面不存在，后面发现是因为md文章里面标题的名字大小写和md文章本身名字不一样，然后注意最上方加粗的格式里面的冒号不是中文的" class="headerlink" title="博客重新整了一下，因为距第一次上传太久了，后面惊讶发现自己上传文章以后在博客网页点开文章后显示页面不存在，后面发现是因为md文章里面标题的名字大小写和md文章本身名字不一样，然后注意最上方加粗的格式里面的冒号不是中文的"></a>博客重新整了一下，因为距第一次上传太久了，后面惊讶发现自己上传文章以后在博客网页点开文章后显示页面不存在，后面发现是因为md文章里面标题的名字大小写和md文章本身名字不一样，然后注意最上方加粗的格式里面的冒号不是中文的</h5><p>最后又重新传了一遍，不知道为什么以前传的头像和背景都没了，然后又拖了段时间实在受不了了（其实是看别人博客都很好看……），然后重新传了一下（虽然现在也就只有首页能看吧），注意编辑yml的时候不要用”\“应该用“&#x2F;”，然后因为之前配置图片是在img文件夹下面发现没有用，网上搜也没有很具体，最后试出来是在blog\public最后下面的img里面配置图片，然后编辑yml界面的时候的相对路径写这个就可以了</p>
-<p>看了些别人写的博客</p>
-<h5 id="nss还是做了点小题，polar也做了一些感觉确实题目有些出的比较奇怪（可忽略）"><a href="#nss还是做了点小题，polar也做了一些感觉确实题目有些出的比较奇怪（可忽略）" class="headerlink" title="nss还是做了点小题，polar也做了一些感觉确实题目有些出的比较奇怪（可忽略）"></a>nss还是做了点小题，polar也做了一些感觉确实题目有些出的比较奇怪（可忽略）</h5><h5 id="逆向工程核心原理搞到第一部分，但是后期因为对windows方面知识储备不足所以有所卡顿"><a href="#逆向工程核心原理搞到第一部分，但是后期因为对windows方面知识储备不足所以有所卡顿" class="headerlink" title="逆向工程核心原理搞到第一部分，但是后期因为对windows方面知识储备不足所以有所卡顿"></a>逆向工程核心原理搞到第一部分，但是后期因为对windows方面知识储备不足所以有所卡顿</h5><h5 id="工具方面都很粗略看了下，网课，docker-cmake-git-正则表达式，IDA特训营（看了一些没有看完，有些想实践一下实在没有找到对应的题）"><a href="#工具方面都很粗略看了下，网课，docker-cmake-git-正则表达式，IDA特训营（看了一些没有看完，有些想实践一下实在没有找到对应的题）" class="headerlink" title="工具方面都很粗略看了下，网课，docker,cmake,git,正则表达式，IDA特训营（看了一些没有看完，有些想实践一下实在没有找到对应的题）"></a>工具方面都很粗略看了下，网课，docker,cmake,git,正则表达式，IDA特训营（看了一些没有看完，有些想实践一下实在没有找到对应的题）</h5><p>目前感觉好像没有怎么用到上面的工具所以还是很生疏感觉会忘，感觉学的很浅</p>
-<h5 id="很粗浅的看了一点点计网的东西，然后接触了点点简单的Misc"><a href="#很粗浅的看了一点点计网的东西，然后接触了点点简单的Misc" class="headerlink" title="很粗浅的看了一点点计网的东西，然后接触了点点简单的Misc"></a>很粗浅的看了一点点计网的东西，然后接触了点点简单的Misc</h5><p>然后这个假期差不多就这样了，偶尔还是会有点焦虑，想个题想半天搞不出来有点自闭，不过幸好最后都解决了，这个学期的目标是争取按板块完善自己RE方面的知识储备，还没有开始pwn，还是希望后期自己能稳住心态，学踏实一点吧</p>
-<p>新学期加油💪</p>
+                <h1 id="PE文件的块"><a href="#PE文件的块" class="headerlink" title="PE文件的块"></a>PE文件的块</h1><p>PE文件使用的是一个平面的地址空间，所有的代码和数据都被合并在一起，组成一个很大的结构，文件的内容被分为很多的块，块中包含代码和数据，在排列位置上，在PE文件的DOS头部和PE文件头之后就是块表和多个不同的块，（Section,又称为节，区块，区段）</p>
+<h2 id="Windows是如何将PE文件映射到内存中的："><a href="#Windows是如何将PE文件映射到内存中的：" class="headerlink" title="Windows是如何将PE文件映射到内存中的："></a>Windows是如何将PE文件映射到内存中的：</h2><h6 id="在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文件类似的机制，也就是说windows装载器在装载的时候仅仅建立好虚拟地址与PE文件的映射关系，只有真正执行到某个内存页指令或者访问页中数据时，这个页面才会被从磁盘提交到物理内存"><a href="#在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文件类似的机制，也就是说windows装载器在装载的时候仅仅建立好虚拟地址与PE文件的映射关系，只有真正执行到某个内存页指令或者访问页中数据时，这个页面才会被从磁盘提交到物理内存" class="headerlink" title="在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文件类似的机制，也就是说windows装载器在装载的时候仅仅建立好虚拟地址与PE文件的映射关系，只有真正执行到某个内存页指令或者访问页中数据时，这个页面才会被从磁盘提交到物理内存"></a>在执行一个PE文件时，Windows并不在一开始就将整个文件读入内存，而是采用与内存映射文件类似的机制，也就是说windows装载器在装载的时候仅仅建立好虚拟地址与PE文件的映射关系，只有真正执行到某个内存页指令或者访问页中数据时，这个页面才会被从磁盘提交到物理内存</h6><p>这种机制使文件装入的速度和文件大小没有关系，但是需要注意的是系统装载可执行文件的方法又不完全等同于内存映射文件，在装载前，有些数据会发生预处理，比如重定位，所以，数据之间的相对位置可能发生轻微变化</p>
+<p>windows装载器在装载PE文件时的DOS头部，PE文件头和块表部分不会做任何处理，而在装载块时根据块的属性做不同的处理</p>
+<p>块的偏移：块在磁盘文件中是按照可选映像头结构中的FileAlignment字段的值对齐的，而被装载到内存中是按照可选映像头结构中的SectionAlignment字段的值对齐的。所以一个块被装入内存后相对于文件头的偏移和1磁盘文件的偏移是不同的。</p>
+<p>重点块♥：</p>
+<p>.text:代码块，内容全是指令代码。在编译或者汇编结束产生的一种块</p>
+<p>.data：读&#x2F;写数据块，一般存放全局变量和静态变量，是初始化的数据块</p>
+<p>.rdata:只读数据块，用于存放调试目录和说明字符串，是运行期只读的数据</p>
+<p>.idata:输入表，包含其他的DLL的函数及数据信息，有的编译器会将这个块合并到.rdata块</p>
+<p>.edata:输入表，创建一个输出API或数据的可执行文件时，会用到此块</p>
+<p>.rsrc:资源快，包含模块的全部资源，如图标，菜单，位图等</p>
+<p>IMAGE_SECTION_HEADER长度为40个字节</p>
+<p>PE文件头的最后部分——可选映像头的数据目录表：位于128h到117h之间</p>
+<p>可在LoadPE中选择区段来查看区段表</p>
+<h1 id="PE文件的输入和输出表"><a href="#PE文件的输入和输出表" class="headerlink" title="PE文件的输入和输出表"></a>PE文件的输入和输出表</h1><p>一个windows程序基本上所实现的所有功能几乎都是直接调用系统dll提供的API函数实现的，要使用任何一个dll所提供的函数，我们需要将它导入，也就是用到了输入表，输入表在软件外壳基础中十分重要对于那些提供了被导出函数的dll程序来说，它们必须使用输出表将函数输出之后别的程序才可以使用</p>
+<p>无论是自己编写的dll还是系统提供的标准dll，只要想要提供函数给别人使用，就一定要建立输出表，一般的开发环境都能编写具有输出功能的程序，输出表都是由链接器之中建立的，我们只需要指定被输出函数的名称或者序号就可以了，输出表通常出现在dll文件的edata中。</p>
+<h5 id="IT"><a href="#IT" class="headerlink" title="IT:"></a>IT:</h5><p>可执行文件使用来自于其他DLL的代码或数据时，称为输入。当PE文件装载到内存时，windows加载器的工作之一就是定位所有被输入的函数和数据，并且让正在被装入的文件可以使用那些地址。这个过程是通过PE文件的输入表（Import Table ，简称IT，又称为导入表）来完成的，输入表中保存的是函数名和其驻留dll名等动态连接所需要的信息。</p>
+<h5 id="IAT"><a href="#IAT" class="headerlink" title="IAT:"></a>IAT:</h5><p>在PE文件中，有一组数据结构，它们分别对应着每个被输入的dll，每一个这样的结构都给出了被输入的dll名称并指向一组函数指针。这组函数指针被称为输入地址表（Import Address Table,简称IAT)。每一个被引入的API在IAT里都有它自己的保留位置，在那里它将被windows装载器写入输入函数的地址，一旦模块被装入，IAT中包含所要调用输入函数的地址。</p>
+<h5 id="IID："><a href="#IID：" class="headerlink" title="IID："></a>IID：</h5><p>PE文件头的可选映像头中，数据目录表的第二个成员指向输入表，输入表以一个IMAGE_IMPORT_DESCRIPTOR（简称IID)数组开始。每个被PE文件隐式地链接进来的DLL都有一个IID。在这个数组中，没有字段指出该数组结构的项数，但是它的最后一个单元是NULL，由此计算出该数组的项数。</p>
+<p>例如，某个PE文件从两个DLL文件中引入函数，就存在两个IID结构来描述这些DLL文件，并在两个IID结构的最后一个内容全为0的IID结构作为结束。</p>
+<p>每个IID结构的长度是5个双字，即20个字节。</p>
+<p>每个IMAGE_IMPORT_DESCRIPOR(简称IID)结构定义如下：（部分）</p>
+<p>IMAGE_IMPORT_DESCRIPOR STRUCT{</p>
+<p>UNION</p>
+<p>Characteristics dd?</p>
+<p>OriginalFirstThunk dd? &#x2F;&#x2F;指向INT（输入名称表），为RVA</p>
+<p>Ends</p>
+<p>TimeDateStamp dd? 	&#x2F;&#x2F;32位</p>
+<p>ForwaderChain dd? &#x2F;&#x2F;转向索引，一般为0</p>
+<p>Name dd？ &#x2F;&#x2F;指向DLL名称的RVA值，如“kernel32.dll”</p>
+<p>FirstThunk dd? &#x2F;&#x2F;指向IAT（输入地址表）的RVA值</p>
+<p>IMAGE_IMPORT_DESCRIPOR STRUCT ENDS}</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240304223655245.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240304223655245"></p>
+<p>OriginalFirstThunk 与FirstThunk非常相似，它们指向两个本质上相同的IMAGE_THUNK_DATA的结构的数组。一般来说，OriginalFirstThunk 指向的 IMAGE_THUNK_DATA的结构数据称为输入名称表，（Import Name Table—-INT),FirstThunk指向的数据结构数组称为输入地址表（Import Address Table–IAT)</p>
+<p>!<img src="https://img-blog.csdn.net/20151218122416073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="img"></p>
+<p>IMAGE_THUNK_DATA结构的数组中，每个元素对应于一个从可执行文件输入的函数，数组结构的结束也是通过一个全为0的元素作为标识。</p>
+<p>在IMAGE_THUNK_DATA中的ForwarderString指向一个转向字符的RVA值，Function是被输入函数的内存地址，ordinal是被输入函数的API的序数值，AddressOfData指向IMAGE_IMPORT_BY_NAME</p>
+<p>ordinal和addressofdata什么时候使用？</p>
+<p>当IMAGE_THUNK_DATA类型的数据的最高位为1的时候，代表函数以序号的方式导入，ordinal的低31位就是输入函数在其DLL内的导出序号</p>
+<p>当IMAGE_THUNK_DATA类型的数据最高位为0的时候，代表函数以字符串方式导入，这时AddressOfData就是一个指向用来导入函数名称的IMAGE_IMPORT_BY_NAME的数据结构的RVA</p>
+<p>typedef struct _IMAGE_IMPORT_BY_NAME {<br>        WORD Hint; &#x2F;&#x2F;函数序号，不是必须的</p>
+<p>​		BYTE Name[1];&#x2F;&#x2F;导入函数名称，为以0结尾的ASCII字串<br>} </p>
+<p>IMAGE_IMPORT_BY_NAME ENDS</p>
+<p>这里的NAME大小是一个可变的尺寸域</p>
+<p>数据目录表位于128h到1A7h之间，每个成员占8个字节，分别指向相关的结构，</p>
+<p>第一个八个字节指向输出表，如果全部为0，这个文件的地址和大小都是0，表示没有输出表</p>
+<p>地址130h-137h是数据目录表第二项，指向输入表，输入表的前四个字节是一个相对虚拟地址（注意小端序存放地址，这个地方不是实际地址也不是偏移量），后4个字节是大小</p>
+<p>LordPE位置计算器可以用来计算偏移量</p>
 
                 
               </div>
@@ -345,7 +373,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="print-no-link">#学习记录</a>
+        <a href="/tags/RE/" class="print-no-link">#RE</a>
       
     </div>
   
@@ -357,8 +385,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>2023-2024 上学期寒假假期学习总结</div>
-      <div>http://example.com/2024/03/04/2023-2024 上学期寒假假期学习总结/</div>
+      <div>PE文件的块</div>
+      <div>http://example.com/2024/03/05/PE文件的块/</div>
     </div>
     <div class="license-meta">
       
@@ -370,7 +398,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月4日</div>
+          <div>2024年3月5日</div>
         </div>
       
       
@@ -402,18 +430,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/05/PE%E6%96%87%E4%BB%B6%E7%9A%84%E5%9D%97/" title="PE文件的块">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PE文件的块</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/03/2024%20%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="2024第一周学习笔记">
-                        <span class="hidden-mobile">2024第一周学习笔记</span>
+                      <a href="/2024/03/04/2023-2024%20%E4%B8%8A%E5%AD%A6%E6%9C%9F%E5%AF%92%E5%81%87%E5%81%87%E6%9C%9F%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="2023-2024 上学期寒假假期学习总结">
+                        <span class="hidden-mobile">2023-2024 上学期寒假假期学习总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
