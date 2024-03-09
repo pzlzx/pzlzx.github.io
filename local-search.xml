@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2024/03/09/%E8%84%B1%E5%A3%B3%E6%A6%82%E5%BF%B5%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    <url>/2024/03/09/%E8%84%B1%E5%A3%B3%E6%A6%82%E5%BF%B5%E5%9F%BA%E7%A1%80%E7%AF%87/</url>
+    
+    <content type="html"><![CDATA[<h1 id="脱壳概念基础篇"><a href="#脱壳概念基础篇" class="headerlink" title="脱壳概念基础篇"></a>脱壳概念基础篇</h1><hr><p>title : 脱壳概念基础篇</p><p>tags : RE</p><hr><h5 id="1-壳的加载过程"><a href="#1-壳的加载过程" class="headerlink" title="1.壳的加载过程"></a>1.壳的加载过程</h5><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091525508.jpg" alt="D526FEE13409303A711B38708D1DA3A5"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091525051.jpg" alt="6B2750CDF21D0BDFEE7205F0CCE1EECC"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091525840.jpg" alt="D085D8032C06EB770D41C400639DC93E"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091527534.jpg" alt="73BE13D70DB398A1094475005474168F"></p><p>![8B666B57B2FC5D05063D4258807AE268](C:\Users\asus\Documents\Tencent Files\3175955044\Image\C2C\Image1\8B666B57B2FC5D05063D4258807AE268.jpg)</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091529572.jpg" alt="3CA1B2D9DD07AFE07BCB56A42A81CE30"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091529499.jpg" alt="C1FD409CD88241B869A0F9CBC4FF5B77"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091529051.jpg" alt="1E188D8C87021FAF0223A61FAC2FAFE8"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091529086.jpg" alt="BA73F79F827B0AFC9CF0874C919E5D8F"></p><h5 id="2-脱壳技术"><a href="#2-脱壳技术" class="headerlink" title="2.脱壳技术"></a>2.脱壳技术</h5><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091530279.jpg" alt="82FC0C68A7CFF41CBD9459CD627B3BF2"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091530124.jpg" alt="87AB783DA928413A366272587A1240D8"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091531155.jpg" alt="7DD991BE0E746B2CE03B1CDB17D13726"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403091531953.jpg" alt="73BDBA0371A03D7B6BDF96CDED3DA3A0"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SEH结构化异常处理</title>
+    <link href="/2024/03/08/SEH%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    <url>/2024/03/08/SEH%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<h1 id="SEH结构化异常处理"><a href="#SEH结构化异常处理" class="headerlink" title="SEH结构化异常处理"></a>SEH结构化异常处理</h1><p>计算机领域异常：打断程序正常执行流程，不在期望之中的硬件和软件的异常</p><p>硬件一般指CPU抛出的问题，例如除以0，数据溢出等</p><p>软件一般指操作系统与程序通过exception语句抛出的异常</p><p>结构化异常处理和异常处理是微软对异常处理程序在实现上的不同</p><p>普通C++异常处理：使用3条附加的C++语句</p><p>try catch throw</p><p>作用：当正在执行的程序出现异常时，允许其找到安全出口。异常处理程序可捕获任何数据异常情况，包括C++类</p><p>try ……except……函数和try…… finally…… 不可以同时使用但是可以嵌套</p><p>异常程序可释放已获取资源，显示出的信息和程序内部状态供调试，使得调试从错误中恢复，尝试重新执行代码&#x2F;关闭程序</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081357659.jpg" alt="1B0CEF4110F27A6AB2E6AB61E46B18BF"></p><h5 id="故障，例如页面故障——恢复到引起故障的指令之前的状态，然后再次执行一次，发生故障异常后程序仍能正常执行"><a href="#故障，例如页面故障——恢复到引起故障的指令之前的状态，然后再次执行一次，发生故障异常后程序仍能正常执行" class="headerlink" title="故障，例如页面故障——恢复到引起故障的指令之前的状态，然后再次执行一次，发生故障异常后程序仍能正常执行"></a>故障，例如页面故障——恢复到引起故障的指令之前的状态，然后再次执行一次，发生故障异常后程序仍能正常执行</h5><h5 id="陷阱——立即报告错误，返回地址为引起异常的下一条的地址"><a href="#陷阱——立即报告错误，返回地址为引起异常的下一条的地址" class="headerlink" title="陷阱——立即报告错误，返回地址为引起异常的下一条的地址"></a>陷阱——立即报告错误，返回地址为引起异常的下一条的地址</h5><h5 id="终止——不会报告精确位置且不允许重新执行"><a href="#终止——不会报告精确位置且不允许重新执行" class="headerlink" title="终止——不会报告精确位置且不允许重新执行"></a>终止——不会报告精确位置且不允许重新执行</h5><p>从左往右依次是——向量号 助记符 说明 类型 错误号 产生源 </p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081404818.jpg" alt="6B224C0374F57D5BD91D9B9F7388B5BA"></p><p>SIMD 浮点异常</p><p>21-31 Intel 保留位</p><p>SEH 使得拥有回调函数的最后机会</p><h5 id="对齐检查-Alignment-check"><a href="#对齐检查-Alignment-check" class="headerlink" title="对齐检查 Alignment check"></a>对齐检查 Alignment check</h5><p>可由任何对内存数据的引用除法</p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081412997.jpg" alt="C93F7D6F9570D256D0D58473724EF27A"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081413256.jpg" alt="3857FBB5337AFDC1E4E6EB0EEEAC12BF"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081413890.jpg" alt="A630AC72A0F75FEC0C104F4392ED48E9"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081414802.jpg" alt="BC228BFA2F76EE7A60519C7B9E56C4F1"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081414164.jpg" alt="68EB2BFE87AF114E288BB1663A1C5F7A"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081414821.jpg" alt="AC8F882F567902C05263024AE4D49DBB"></p><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202403081414977.jpg" alt="3A838A1BB8D0E036613D4634174AC584"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>RE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows逆向基础知识</title>
     <link href="/2024/03/06/Windows%20%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <url>/2024/03/06/Windows%20%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
