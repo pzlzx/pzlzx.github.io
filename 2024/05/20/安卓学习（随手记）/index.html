@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/71F99186DE853565BD6D63B7E365DF93.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="安卓学习（随手记）来源于吾爱破解安卓逆向by正己 第二期《安卓逆向这档事》二、初识APK文件结构、双开、汉化、基础修 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn 核心破解——修改前后签名不一致  第四期如果替换广告的时候是把关卡路径给替换掉，建议使用mt管理器而不是np管理器，用Np管理器安装包会闪退而且安装完之后就会直接闪退 《安">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安卓学习（随手记）">
+<meta property="og:url" content="http://example.com/2024/05/20/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安卓学习（随手记）来源于吾爱破解安卓逆向by正己 第二期《安卓逆向这档事》二、初识APK文件结构、双开、汉化、基础修 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn 核心破解——修改前后签名不一致  第四期如果替换广告的时候是把关卡路径给替换掉，建议使用mt管理器而不是np管理器，用Np管理器安装包会闪退而且安装完之后就会直接闪退 《安">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404010938856.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050047107.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050053098.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050103683.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050107710.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050107018.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404061028366.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050129819.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050137451.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050138828.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404060915772.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404060919866.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062157824.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062159584.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062200565.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062200654.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062242981.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062243108.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062250435.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062252580.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062304504.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062321903.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062322349.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062323920.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062324695.png">
+<meta property="article:published_time" content="2024-05-20T04:34:49.638Z">
+<meta property="article:modified_time" content="2024-05-20T04:36:15.913Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="RE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404010938856.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>安卓学习（随手记） - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"\\img\\A008779F61D12BE23A64C76080892F5C.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>wwzx blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="安卓学习（随手记）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-20 12:34" pubdate>
+          2024年5月20日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">安卓学习（随手记）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="安卓学习（随手记）"><a href="#安卓学习（随手记）" class="headerlink" title="安卓学习（随手记）"></a>安卓学习（随手记）</h1><p>来源于吾爱破解安卓逆向by正己</p>
+<h5 id="第二期"><a href="#第二期" class="headerlink" title="第二期"></a>第二期</h5><p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1695796-1-1.html">《安卓逆向这档事》二、初识APK文件结构、双开、汉化、基础修 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p>核心破解——修改前后签名不一致</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404010938856.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240401093758761"></p>
+<h5 id="第四期"><a href="#第四期" class="headerlink" title="第四期"></a>第四期</h5><p>如果替换广告的时候是把关卡路径给替换掉，建议使用mt管理器而不是np管理器，用Np管理器安装包会闪退而且安装完之后就会直接闪退</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1706691-1-1.html">《安卓逆向这档事》四、恭喜你获得广告&amp;弹窗静默卡 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p>对于第一种直接替换路径的方法，不太推荐实操这样因为程序加载的时候一般会先进行一些资源的加载，直接跳过可能会引起问题</p>
+<p>使用算法助手+Xposed工具将弹窗给hook掉。或者将第二次弹出广告的返回给Hook掉</p>
+<p>开发者助手在抓一些图片的时候可能抓不到</p>
+<h5 id="第五期"><a href="#第五期" class="headerlink" title="第五期"></a>第五期</h5><p>调试apk文件添加权限的时候应该添加在xml里面的application里面</p>
+<p>雷电模拟器自带端口转发</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1714727-1-1.html">《安卓逆向这档事》五、1000-7&#x3D;？&amp;动态调试&amp;Log插桩 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p>Ctr+B  JEB下断点快捷键</p>
+<h5 id="第六期"><a href="#第六期" class="headerlink" title="第六期"></a>第六期</h5><p>在算法助手里面选择“log捕获，防止应用退出，防止应用闪退”</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1731181-1-1.html">《安卓逆向这档事》六、校验的N次方-签名校验对抗、PM代{过}{滤}理、IO重定向 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p>io重定向——使之读不到改变后的地方来过掉校验</p>
+<p>去掉apk校验</p>
+<p>去掉root检验方法：</p>
+<p>方法一：找到对应的源码，让源码的方法返回一个False</p>
+<p>方法二：里面有“隐藏root“和””隐藏xposed”这一功能”（使用手机）</p>
+<p>就没有root的弹窗</p>
+<p>方法三：io重定向</p>
+<p>方法四：修改Andoird源码，去除常见指纹</p>
+<p>模拟器检测<a target="_blank" rel="noopener" href="https://ionized-bag-d70.notion.site/04dbaf39091f42519b14decd2a87fde7">模拟器检测对抗 (notion.site)</a></p>
+<p>反调试检测：</p>
+<p>[<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-268155.htm">原创]对安卓反调试和校验检测的一些实践与结论-Android安全-看雪-安全社区|安全招聘|kanxue.com</a></p>
+<p>Int型赋值的时候要注意</p>
+<p>const&#x2F;4和const&#x2F;16的区别</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/home.php?mod=space&uid=874154&do=thread&view=me&from=space">芽衣的帖子 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<h5 id="第九期"><a href="#第九期" class="headerlink" title="第九期"></a>第九期</h5><p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1762225-1-1.html">《安卓逆向这档事》九、密码学基础、算法自吐、非标准加密对抗 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p>可以使用算法助手里面的算法分析来进行对实现加密的函数的类型的考察（30min）最后实现算法自吐</p>
+<p>可以通过一些系统的加解密库hook出来</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050047107.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405004749854"></p>
+<p>AES密钥长度比DES长，（32DES）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050053098.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405005349985"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050103683.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405010341598"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050107710.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload></p>
+<p>用kotlin写的可以直接删掉</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050107018.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405010733909"></p>
+<h5 id="第八期"><a href="#第八期" class="headerlink" title="第八期"></a>第八期</h5><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404061028366.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406102808872"></p>
+<p>没有String用Object</p>
+<h5 id="第十期"><a href="#第十期" class="headerlink" title="第十期"></a>第十期</h5><p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1787667-1-1.html">《安卓逆向这档事》十、不是我说，有了IDA还要什么女朋友？ - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050129819.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405012922711"></p>
+<p>AS创建一个native c++项目，配合NDK CMake使用</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050137451.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405013732287"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404050138828.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240405013821651"></p>
+<p>如果是静态注册的话，会有一个标识符</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404060915772.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406091552523"></p>
+<p>JNIEXPORT表明它是一个导出函数</p>
+<p>如果是静态函数的话，就可以直接搜索java</p>
+<p>把原来的int型给改了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404060919866.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406091928775"></p>
+<p>在JNI中，<code>JNIEnv*</code> 是指针类型，指向一个接口环境实例。这个接口环境是Java本地接口(JNI)提供的一组函数集合，用于连接Java代码（运行在Java虚拟机JVM中）和用其他编程语言（如C、C++或汇编等）编写的本地（native）代码进行交互。</p>
+<p>在JNI中编写本地方法时，Java虚拟机会将JNIEnv指针作为参数传递给这些方法，通过它，可以调用各种JNI函数来操作Java对象、调用Java方法、访问Java字段以及执行其他与Java环境交互的任务。</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1787667-1-1.html">《安卓逆向这档事》十、不是我说，有了IDA还要什么女朋友？ - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<h5 id="第十二期"><a href="#第十二期" class="headerlink" title="第十二期"></a>第十二期</h5><p>dlopen 用于加载库文件的关键函数</p>
+<p>如果我要在找一个native层的函数，so文件在IDA里面进行搜索以后（java）发现并没有找到想找的那个函数，则这个函数不是静态方法的而是动态注册的，就直接搜名字</p>
+<p>改类型（native),这样就可以识别一些函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062157824.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406215658686"></p>
+<p>让字符串完整显示的一个方法</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062159584.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406215945418"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062200565.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406220027486"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062200654.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406220046541"></p>
+<p>注意反调试</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1809646-1-1.html">《安卓逆向这档事》十二、大佬帮我分析一下 - 『移动安全区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062242981.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406224245896"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062243108.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406224344019"></p>
+<p>[<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-268155.htm">原创]对安卓反调试和校验检测的一些实践与结论-Android安全-看雪-安全社区|安全招聘|kanxue.com</a></p>
+<h6 id="ollvm"><a href="#ollvm" class="headerlink" title="ollvm"></a>ollvm</h6><p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062250435.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406225003385"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062252580.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406225251484"></p>
+<p>字符串加密的原理很简单，编写一个pass将其中的字符串信息使用一些加密算法进行加密，然后特定的时间进行还原。一般含有字符串混淆、函数名混淆、不在init_array解密等<br>常见的特征：datadiv_decoded</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062304504.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406230406431"></p>
+<p>IDA trace</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062321903.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406232100682"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062322349.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406232219305"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062323920.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406232300819"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202404062324695.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240406232405616"></p>
+<p>PS:如果你trace了整个方法，但是当程序跑完以后有些基本块颜色没有变成黄色（变黄即成功运行），则说明那个是虚假函数，可以不用分析</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/RE/" class="print-no-link">#RE</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>安卓学习（随手记）</div>
+      <div>http://example.com/2024/05/20/安卓学习（随手记）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/18/pixel3%E5%88%B7%E6%9C%BA%E8%AE%B0%E5%BD%95/" title="pixel3刷机记录及frida真机环境配置">
+                        <span class="hidden-mobile">pixel3刷机记录及frida真机环境配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
