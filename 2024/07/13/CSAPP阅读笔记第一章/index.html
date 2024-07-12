@@ -16,32 +16,28 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="【绿城杯2021】babyvxworks wp前述：其实记录这个题主要是要提醒自己三分逆向七分猜的道理，不要死扣…… 打开通过字符串查找去找到main函数 发现无法生成伪代码，查看发现是花指令的原因，然后还有函数的尾部地址识别不正确的问题  其实一般来说这个地方的0XE8是作为call指令的机械码不会呗显示出来的，但是这个地方被IDA识别了就减轻了一定程序的工作量了 选择将E8填充为90或者直接n">
+    <meta name="description" content="CSAPP阅读笔记第一章文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#开头的命令修改原始">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【绿城杯2021】babyvxworks wp">
-<meta property="og:url" content="http://example.com/2024/07/11/%E3%80%90%E7%BB%BF%E5%9F%8E%E6%9D%AF2021%E3%80%91babyvxworks/index.html">
+<meta property="og:title" content="CSAPP阅读笔记第一章">
+<meta property="og:url" content="http://example.com/2024/07/13/CSAPP%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="【绿城杯2021】babyvxworks wp前述：其实记录这个题主要是要提醒自己三分逆向七分猜的道理，不要死扣…… 打开通过字符串查找去找到main函数 发现无法生成伪代码，查看发现是花指令的原因，然后还有函数的尾部地址识别不正确的问题  其实一般来说这个地方的0XE8是作为call指令的机械码不会呗显示出来的，但是这个地方被IDA识别了就减轻了一定程序的工作量了 选择将E8填充为90或者直接n">
+<meta property="og:description" content="CSAPP阅读笔记第一章文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#开头的命令修改原始">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110120818.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110123177.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110128336.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110147992.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110148656.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110149448.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110152843.png">
-<meta property="article:published_time" content="2024-07-10T18:18:33.097Z">
-<meta property="article:modified_time" content="2024-07-12T18:45:54.355Z">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130040224.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130154531.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130236020.jpg">
+<meta property="article:published_time" content="2024-07-12T18:45:32.669Z">
+<meta property="article:modified_time" content="2024-07-12T18:44:13.595Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="wp">
+<meta property="article:tag" content="CSAPP笔记">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110120818.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130040224.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>【绿城杯2021】babyvxworks wp - Hexo</title>
+  <title>CSAPP阅读笔记第一章 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【绿城杯2021】babyvxworks wp"></span>
+            <span id="subtitle" data-typed-text="CSAPP阅读笔记第一章"></span>
           
         </div>
 
@@ -233,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-11 02:18" pubdate>
-          2024年7月11日 凌晨
+        <time datetime="2024-07-13 02:45" pubdate>
+          2024年7月13日 凌晨
         </time>
       </span>
     
@@ -245,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          533 字
+          1.4k 字
         
       </span>
     
@@ -256,7 +252,7 @@
         
         
         
-          5 分钟
+          12 分钟
         
       </span>
     
@@ -301,38 +297,42 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【绿城杯2021】babyvxworks wp</h1>
+            <h1 id="seo-header">CSAPP阅读笔记第一章</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="【绿城杯2021】babyvxworks-wp"><a href="#【绿城杯2021】babyvxworks-wp" class="headerlink" title="【绿城杯2021】babyvxworks wp"></a>【绿城杯2021】babyvxworks wp</h1><h4 id="前述："><a href="#前述：" class="headerlink" title="前述："></a>前述：</h4><p>其实记录这个题主要是要提醒自己三分逆向七分猜的道理，不要死扣……</p>
-<p>打开通过字符串查找去找到main函数</p>
-<p>发现无法生成伪代码，查看发现是花指令的原因，然后还有函数的尾部地址识别不正确的问题</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110120818.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711012003666"></p>
-<p>其实一般来说这个地方的0XE8是作为call指令的机械码不会呗显示出来的，但是这个地方被IDA识别了就减轻了一定程序的工作量了</p>
-<p>选择将E8填充为90或者直接nop掉，下面的也是一样的，然后再按c选择转换为指令形式</p>
-<p>然后发现还是无法生成伪代码</p>
-<p>原因：下图中可以看到push后还有call的调用，很明显函数没有结束但是这个地方IDA却显示为函数sub_3D9 的末尾，所以我们需要选择将这个错误的识别给去掉，在IDA菜单栏Edit里面找到functions，选择delete functions，然后其他的也是一样的</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110123177.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711012310144"></p>
-<p>最后再再函数第一个retn处创建函数末尾，Edit-functions-set function end</p>
-<p>然后再回到未正确识别的函数开头p创建函数开头或者直接对着代码块F5即可正确创建伪代码</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110128336.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711012849280"></p>
-<p>如下：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110147992.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711014732943"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110148656.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711014800588"></p>
-<p>看着挺头痛的其实直接追踪input即可</p>
-<p>中间那一坨我们猜测是在对文件进行读取或其他操作</p>
-<p>sub_34C0函数其实是在对Input进行长度的获取，即可以重命名为strlen</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110149448.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711014937397"></p>
-<p>然后我们观察do循环中v1和v38的赋值只有loc_330不同，后面为比较</p>
-<p>所以猜测loc_330为加密函数</p>
-<p>进入后发现只有一个异或操作和加法操作，循环次数为长度</p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407110152843.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240711015243807"></p>
-<p>exp:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span> </span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;string.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> i,j;<br>	<span class="hljs-type">int</span> key[]=<br>	&#123;<br>		<br>		<span class="hljs-number">188</span>, <span class="hljs-number">10</span>, <span class="hljs-number">187</span>, <span class="hljs-number">193</span>, <span class="hljs-number">213</span>, <span class="hljs-number">134</span>, <span class="hljs-number">127</span>, <span class="hljs-number">10</span>, <span class="hljs-number">201</span>, <span class="hljs-number">185</span>, <span class="hljs-number">81</span>, <span class="hljs-number">78</span>,<br>		<span class="hljs-number">136</span>, <span class="hljs-number">10</span>, <span class="hljs-number">130</span>, <span class="hljs-number">185</span>, <span class="hljs-number">49</span>, <span class="hljs-number">141</span>, <span class="hljs-number">10</span>, <span class="hljs-number">253</span>, <span class="hljs-number">201</span>, <span class="hljs-number">199</span>, <span class="hljs-number">127</span>, <span class="hljs-number">185</span>,<br>		<span class="hljs-number">17</span>, <span class="hljs-number">78</span>, <span class="hljs-number">185</span>, <span class="hljs-number">232</span>, <span class="hljs-number">141</span>, <span class="hljs-number">87</span><br>	&#125;;<br><br>	<span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">30</span>;i++)<br>	&#123;<br>		<span class="hljs-keyword">for</span>(j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">30</span>;j++)<br>		&#123;<br>			key[i]-=<span class="hljs-number">3</span>;<br>			key[i]^=<span class="hljs-number">0x22</span>;<br>		&#125;<br>		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,key[i]);<br>	&#125;<br> 		<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<p>flag{helo_w0rld_W3lcome_70_R3}</p>
+                <h1 id="CSAPP阅读笔记第一章"><a href="#CSAPP阅读笔记第一章" class="headerlink" title="CSAPP阅读笔记第一章"></a>CSAPP阅读笔记第一章</h1><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件</p>
+<p>GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130040224.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="img"></p>
+<h3 id="源程序到可执行文件的过程"><a href="#源程序到可执行文件的过程" class="headerlink" title="源程序到可执行文件的过程"></a>源程序到可执行文件的过程</h3><h4 id="预处理阶段："><a href="#预处理阶段：" class="headerlink" title="预处理阶段："></a>预处理阶段：</h4><p>预处理器(cpp)根据字符#开头的命令修改原始的c程序。读取头文件中的内容并直接插入程序文本中。通常以.i作为文件扩展名。</p>
+<p><strong>引入头文件，去除注释，处理所有的条件编译指令（#ifdef,#ifndef,#else,#elif,#endif），宏的替换，添加行号，保留所有的编译器指令</strong>。</p>
+<h4 id="编译阶段："><a href="#编译阶段：" class="headerlink" title="编译阶段："></a>编译阶段：</h4><p>编译器（ccl)将文本文件hello.i翻译成文本文件hello.s,它包含一个汇编语言程序。</p>
+<h5 id="主要是对预处理后的文件进行语法分析，词法分析，语义分析，符号汇总，然后生成汇编代码。"><a href="#主要是对预处理后的文件进行语法分析，词法分析，语义分析，符号汇总，然后生成汇编代码。" class="headerlink" title="主要是对预处理后的文件进行语法分析，词法分析，语义分析，符号汇总，然后生成汇编代码。"></a>主要<strong>是对预处理后的文件进行语法分析，词法分析，语义分析，符号汇总，然后生成汇编代码</strong>。</h5><h4 id="汇编阶段："><a href="#汇编阶段：" class="headerlink" title="汇编阶段："></a>汇编阶段：</h4><p>汇编器(as)将hello.s翻译成机器语言指令，并把这些指令打包成一种叫做可重定位目标程序的格式，并将结果保存在目标文件hello.o中。此时打开文件将会看到一堆乱码。</p>
+<p><strong>汇编过程将汇编代码转成二进制文件。</strong></p>
+<h4 id="链接阶段："><a href="#链接阶段：" class="headerlink" title="链接阶段："></a>链接阶段：</h4><p>链接器（ld）负责合并标准c库函数的.o文件，合并到我们原来的hello.o程序中。生成可执行文件。</p>
+<h4 id="操作系统管理硬件"><a href="#操作系统管理硬件" class="headerlink" title="操作系统管理硬件"></a>操作系统管理硬件</h4><p>操作系统是应用程序和硬件之间插入的一层软件。所有应用程序对硬件的操作尝试都必须通过操作系统。</p>
+<h3 id="计算机系统中抽象的重要性："><a href="#计算机系统中抽象的重要性：" class="headerlink" title="计算机系统中抽象的重要性："></a>计算机系统中抽象的重要性：</h3><p><strong>操作系统有两个基本功能</strong>：（1）防止硬件被失控的应用程序滥用；（2）向应用程序提供简单一致的机制来控制复杂而又通常大不相同的低级硬件设备。</p>
+<h5 id="操作系统通过几个基本的抽象概念-进程、虚拟内存和文件）来实现这两个功能"><a href="#操作系统通过几个基本的抽象概念-进程、虚拟内存和文件）来实现这两个功能" class="headerlink" title="操作系统通过几个基本的抽象概念(进程、虚拟内存和文件）来实现这两个功能:"></a>操作系统通过几个基本的抽象概念(进程、虚拟内存和文件）来实现这两个功能:</h5><p>文件是对O设备的抽象表示，</p>
+<p>虚拟内存是对主存和磁盘I&#x2F;O设备的抽象表示，</p>
+<p>进程则是对处理器、主存和I&#x2F;O设备的抽象表示。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130154531.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240713015418489"></p>
+<h4 id="进程-线程"><a href="#进程-线程" class="headerlink" title="进程&amp;线程"></a>进程&amp;线程</h4><p>进程是操作系统对一个正在运行的程序的一种抽象。在一个系统上可以<strong>同时运行多个进程</strong>，而每个进程都好像在<strong>独占地使用硬件</strong>。</p>
+<p>而并发运行，则是说一个进程的指令和另个进程的指令是交错执行的。</p>
+<h5 id="上下文："><a href="#上下文：" class="headerlink" title="上下文："></a>上下文：</h5><h5 id="操作系统保持和跟踪进程运行所需的所有状态信息（PC值，主存的内容等）。"><a href="#操作系统保持和跟踪进程运行所需的所有状态信息（PC值，主存的内容等）。" class="headerlink" title="操作系统保持和跟踪进程运行所需的所有状态信息（PC值，主存的内容等）。"></a>操作系统保持和跟踪进程运行所需的所有状态信息（PC值，主存的内容等）。</h5><h5 id="上下文切换："><a href="#上下文切换：" class="headerlink" title="上下文切换："></a>上下文切换：</h5><h6 id="一般来说不管单核还是多核，一个CPU看上去都像是在并发的执行多个进程，这是通过处理器在进程间切换来实现的，这就叫做上下文切换。"><a href="#一般来说不管单核还是多核，一个CPU看上去都像是在并发的执行多个进程，这是通过处理器在进程间切换来实现的，这就叫做上下文切换。" class="headerlink" title="一般来说不管单核还是多核，一个CPU看上去都像是在并发的执行多个进程，这是通过处理器在进程间切换来实现的，这就叫做上下文切换。"></a>一般来说不管单核还是多核，一个CPU看上去都像是在并发的执行多个进程，这是通过处理器在进程间切换来实现的，这就叫做上下文切换。</h6><p>操作系统通过控制处理器在进程间切换以达到交错执行的目的。</p>
+<p>从一个进程到另一个进程的转换是由操作系统内核（ kernel）管理的。内核是操作系统代码常驻主存的部分。内核不是一个独立的进程。相反，它是系统管理全部进程所用代码和数据结构的集合。</p>
+<h4 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h4><p>虚拟内存是一个抽象概念，它为每个进程提供了一个假象，即<strong>每个进程都在独占地使用主存</strong>。每个<strong>进程看到的内存都是一致的</strong>，称为虚拟地址空间。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130236020.jpg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="d9fdf3644a9839d48d293d1db5ad0562"></p>
+<h5 id="程序代码和数据-对于所有进程来说，代码是从同一固定地址开始的，接着就是和C全局变量相对于的数据位置。"><a href="#程序代码和数据-对于所有进程来说，代码是从同一固定地址开始的，接着就是和C全局变量相对于的数据位置。" class="headerlink" title="程序代码和数据: 对于所有进程来说，代码是从同一固定地址开始的，接着就是和C全局变量相对于的数据位置。"></a>程序代码和数据: 对于所有进程来说，代码是从同一固定地址开始的，接着就是和C全局变量相对于的数据位置。</h5><p>存放可执行程序代码和代码中的全局变量。</p>
+<h5 id="堆-代码和数据区在进程一开始运行时就被指定了大小，而调用malloc和free这样的c标准库函数时，堆可以在运行时动态的扩展和收缩。"><a href="#堆-代码和数据区在进程一开始运行时就被指定了大小，而调用malloc和free这样的c标准库函数时，堆可以在运行时动态的扩展和收缩。" class="headerlink" title="堆: 代码和数据区在进程一开始运行时就被指定了大小，而调用malloc和free这样的c标准库函数时，堆可以在运行时动态的扩展和收缩。"></a>堆: 代码和数据区在进程一开始运行时就被指定了大小，而调用malloc和free这样的c标准库函数时，堆可以在运行时动态的扩展和收缩。</h5><p>用于动态申请的内存变量，比如malloc函数申请的动态内存空间，可以向上扩展。</p>
+<h5 id="共享库"><a href="#共享库" class="headerlink" title="共享库:"></a>共享库:</h5><p>用于存放C语言库函数的代码和数据。本例中即printf的代码和数据。</p>
+<h5 id="栈："><a href="#栈：" class="headerlink" title="栈："></a>栈：</h5><p>位于虚拟地址空间的顶部，用于函数调用、存放局部变量等。当我们调用一个函数时，栈会向下扩展，返回时，向上收缩。</p>
+<h5 id="内核虚拟内存"><a href="#内核虚拟内存" class="headerlink" title="内核虚拟内存:"></a>内核虚拟内存:</h5><p> 地址空间顶部的区域是为内核保留的。</p>
+<h4 id="并发-并行"><a href="#并发-并行" class="headerlink" title="并发&amp;并行"></a>并发&amp;并行</h4><p><strong>并发</strong>：一个通用的概念，指一个同时有多个活动的系统</p>
+<p>在微观上并不是同时执行的，只是<strong>把时间分成若干段，使多个进程快速交替的执行</strong>。</p>
+<p><strong>并行</strong>：指用并发来使一个系统运行的更快。并行可以在多个抽象层次上运用</p>
+<p>指在同一时刻，有<strong>多条指令在多个处理器上同时执行</strong>。所以无论从微观还是从宏观来看，二者都是一起执行的。</p>
+<p><strong>超线程</strong>：超线程，有时称为同时多线程（ simultaneous multi-threading），是一项<strong>允许一个CPU执行多个控制流的技术</strong>。</p>
 
                 
               </div>
@@ -345,7 +345,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/wp/" class="print-no-link">#wp</a>
+        <a href="/tags/CSAPP%E7%AC%94%E8%AE%B0/" class="print-no-link">#CSAPP笔记</a>
       
     </div>
   
@@ -357,8 +357,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【绿城杯2021】babyvxworks wp</div>
-      <div>http://example.com/2024/07/11/【绿城杯2021】babyvxworks/</div>
+      <div>CSAPP阅读笔记第一章</div>
+      <div>http://example.com/2024/07/13/CSAPP阅读笔记第一章/</div>
     </div>
     <div class="license-meta">
       
@@ -370,7 +370,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月11日</div>
+          <div>2024年7月13日</div>
         </div>
       
       
@@ -402,18 +402,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/13/CSAPP%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="CSAPP阅读笔记第一章">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CSAPP阅读笔记第一章</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/17/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Djocker/" title="网鼎杯青龙组部分RE WP">
-                        <span class="hidden-mobile">网鼎杯青龙组部分RE WP</span>
+                      <a href="/2024/07/11/%E3%80%90%E7%BB%BF%E5%9F%8E%E6%9D%AF2021%E3%80%91babyvxworks/" title="【绿城杯2021】babyvxworks wp">
+                        <span class="hidden-mobile">【绿城杯2021】babyvxworks wp</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
