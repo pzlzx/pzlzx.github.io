@@ -16,18 +16,18 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="CSAPP阅读笔记第一章文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#开头的命令修改原始">
+    <meta name="description" content="CSAPP阅读笔记第一章——计算机系统漫游文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSAPP阅读笔记第一章">
 <meta property="og:url" content="http://example.com/2024/07/13/CSAPP%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="CSAPP阅读笔记第一章文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#开头的命令修改原始">
+<meta property="og:description" content="CSAPP阅读笔记第一章——计算机系统漫游文件像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件 GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。  源程序到可执行文件的过程预处理阶段：预处理器(cpp)根据字符#">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130040224.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130154531.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130236020.jpg">
 <meta property="article:published_time" content="2024-07-12T18:45:32.669Z">
-<meta property="article:modified_time" content="2024-07-12T18:44:13.595Z">
+<meta property="article:modified_time" content="2024-07-13T07:01:30.092Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="CSAPP笔记">
 <meta name="twitter:card" content="summary_large_image">
@@ -302,7 +302,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="CSAPP阅读笔记第一章"><a href="#CSAPP阅读笔记第一章" class="headerlink" title="CSAPP阅读笔记第一章"></a>CSAPP阅读笔记第一章</h1><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件</p>
+                <h1 id="CSAPP阅读笔记第一章——计算机系统漫游"><a href="#CSAPP阅读笔记第一章——计算机系统漫游" class="headerlink" title="CSAPP阅读笔记第一章——计算机系统漫游"></a>CSAPP阅读笔记第一章——计算机系统漫游</h1><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>像hello.c这种只由ASCII字符构成的文件称为文本文件，所有其他文件都称为二进制文件</p>
 <p>GCC编译器驱动程序读取源文件hello.c，并把它翻译成一个可执行目标文件hello。这个翻译过程分为四个阶段完成，执行这四个阶段的程序（预处理器，编译器，汇编器和链接器）一起构成了编译系统。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407130040224.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="img"></p>
 <h3 id="源程序到可执行文件的过程"><a href="#源程序到可执行文件的过程" class="headerlink" title="源程序到可执行文件的过程"></a>源程序到可执行文件的过程</h3><h4 id="预处理阶段："><a href="#预处理阶段：" class="headerlink" title="预处理阶段："></a>预处理阶段：</h4><p>预处理器(cpp)根据字符#开头的命令修改原始的c程序。读取头文件中的内容并直接插入程序文本中。通常以.i作为文件扩展名。</p>
