@@ -1,0 +1,1023 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/71F99186DE853565BD6D63B7E365DF93.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="暑期考核题目wp【2024春节】解题领红包之Android中级题使用真机下载后查看apk,发现是一个解锁，随便尝试连接一下，发现没有回显提示  然后我们使用jadx打开apk，发现下方日志报错  先不管报错，我们先查看生成的伪代码。 可以看到前面主要是初始化一个包含文本和手势解锁功能的Android Activity，进行加载布局，设置文本内容并初始化手势解锁控件及其监听器等内容  着重关注下面这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考核题目复现">
+<meta property="og:url" content="http://example.com/2024/07/31/%E8%80%83%E6%A0%B8%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="暑期考核题目wp【2024春节】解题领红包之Android中级题使用真机下载后查看apk,发现是一个解锁，随便尝试连接一下，发现没有回显提示  然后我们使用jadx打开apk，发现下方日志报错  先不管报错，我们先查看生成的伪代码。 可以看到前面主要是初始化一个包含文本和手势解锁功能的Android Activity，进行加载布局，设置文本内容并初始化手势解锁控件及其监听器等内容  着重关注下面这">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312330271.jpeg">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312330449.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331893.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331253.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331413.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331567.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331596.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331892.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331940.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331755.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331178.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331974.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331754.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331242.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331660.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332387.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332610.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332067.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332294.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332408.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332749.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332055.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332299.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332707.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332571.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332027.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332265.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332341.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332811.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332091.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332924.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332673.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333525.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333691.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333534.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333565.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333716.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333246.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333805.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333403.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333771.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333210.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333907.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333453.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333458.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333554.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333977.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333465.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333569.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333731.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333672.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333138.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333600.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333293.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334923.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334174.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334402.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334053.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334715.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334043.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334948.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334996.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334747.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334700.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334863.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334940.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334196.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334219.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334418.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334619.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334900.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334458.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335954.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335901.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335236.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335436.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335875.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335180.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335994.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335996.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335315.png">
+<meta property="article:published_time" content="2024-07-31T15:38:56.159Z">
+<meta property="article:modified_time" content="2024-07-31T15:37:45.139Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="wp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312330271.jpeg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>考核题目复现 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"\\img\\A008779F61D12BE23A64C76080892F5C.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>wwzx blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/EF13D2BBFB766BCFD972CC883B67E7AB.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="考核题目复现"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-31 23:38" pubdate>
+          2024年7月31日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          59 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">考核题目复现</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="暑期考核题目wp"><a href="#暑期考核题目wp" class="headerlink" title="暑期考核题目wp"></a>暑期考核题目wp</h1><h1 id="【2024春节】解题领红包之Android中级题"><a href="#【2024春节】解题领红包之Android中级题" class="headerlink" title="【2024春节】解题领红包之Android中级题"></a>【2024春节】解题领红包之Android中级题</h1><p>使用真机下载后查看apk,发现是一个解锁，随便尝试连接一下，发现没有回显提示</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312330271.jpeg" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>然后我们使用jadx打开apk，发现下方日志报错</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312330449.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>先不管报错，我们先查看生成的伪代码。</p>
+<p>可以看到前面主要是初始化一个包含文本和手势解锁功能的Android Activity，进行加载布局，设置文本内容并初始化手势解锁控件及其监听器等内容</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331893.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>着重关注下面这个地方的代码，我们发现只有在进入了isError函数以后才会调用checkPassword函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331253.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>然后看checkPassword函数，</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331413.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>这个函数关键的地方：</p>
+<p>其实就是实现读取将assets目录下面的classes.dex,然后通过数据流写入到apk的data这个目录下面的1.dex文件中</p>
+<p>然后通过使用DexClassLoader类动态加载刚被写入数据的1.dex文件，加载com.zj.wuaipojie2024_2.C类，调用其中声明的 isValidate方法</p>
+<p>这里把下面的代码拎出来：</p>
+<p> String str2 &#x3D; (String) <strong>new</strong> DexClassLoader(file.getAbsolutePath(), getDir(“dex”, 0).getAbsolutePath(), <strong>null</strong>, getClass().getClassLoader()).loadClass(“com.zj.wuaipojie2024_2.C”).getDeclaredMethod(“isValidate”, Context.<strong>class</strong>, String.<strong>class</strong>, <strong>int</strong>[].<strong>class</strong>).invoke(<strong>null</strong>, <strong>this</strong>, str, getResources().getIntArray(C0884R.array.A_offset));</p>
+<p>可以看到isValidate方法的参数（在反射里面），分别为当前MainActivity 实例），密码字符串 str和array.A_offset数组</p>
+<p>然后再去看MainActivity里面提到的<code>GestureUnlock</code> 类</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331567.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>前面其实就是一些视觉元素的初始化与配置，触摸事件处理，绘图逻辑以及手势验证，配置与回调等</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jsx">关注构造函数里面<br><br> **<span class="hljs-variable language_">this</span>**.<span class="hljs-property">defaultKey</span> = <span class="hljs-string">&quot;01234&quot;</span>;<br><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331596.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>结合最下方的setDefaultKey函数，</p>
+<p>而我们通过检查引用发现setDefault函数没有被引用</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331892.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331940.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>我们可以知道这个”01234“没有被更改过，就是密码锁的密码</p>
+<p>而每个点在安卓系统中的图形密码九宫格中是按照从左至右、从上至下的顺序依次编号的，从0到8，这种编号方式如下所示：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><br><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span><br><span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span><br><span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
+
+<p>所以解锁密码应该是这样的</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331755.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>但是发现仍然没有flag（还是太单纯了）</p>
+<p>接下来我们就去分析最开始看到的com.zj.wuaipojie2024_2.C类</p>
+<p>发现jadx里面找不到，这个时候我们就可以想到最开始使用jadx加载apk时的报错</p>
+<p>我们可以将apk解包获取其中assets下的classes.dex然后放入010Editor导入DEX模板进行分析（其实还有个方法，使用jeb打开能直接看到com.zj.wuaipojie2024_2.C类）</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331178.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>但是还是按照正常逻辑思路来</p>
+<p>如果你的010Editor里面没有对应模板</p>
+<p>可以进入下载：<a target="_blank" rel="noopener" href="https://blog.csdn.net/treasure_lili/article/details/103071527">010 editor 应用templates分析ELF和dex文件_010editor 分析elf-CSDN博客</a></p>
+<p>下载完成以后在010Editor里面的Template选项栏里面找到edit template添加我们刚刚下载好的DEX模板</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331974.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>运行模板，效果如下</p>
+<p>![Untitled](D:\笔记\笔记2\1\暑期考核题目wp edeb07c901e84bfaa9d0beabecb339a3\Untitled 11.png)</p>
+<p>最下方报错</p>
+<p>Alder32 checksum did not match, expected 22DCEA4C but got C607EA12<br>Sha1 checksum did not match, expected AA63B92A4B9CA5F53A514B9D620230485C80F0E2 but got DA6A6ECE23966B5BFAA9E922D501E8BB94CA4F9C<br>Result &#x3D; 2 warnings found, template may not have run successfully!</p>
+<p>所以选择修复DEX</p>
+<p>网上随便找个修复教程将这两处的数据修改为正确的即可，当然也可以单独针对这两个部分合理使用AI进行脚本书写</p>
+<p>修复后的dex再次拖入010则报错消失</p>
+<p>这个时候将dex单独拖入jadx也可以正确的显示出com.zj.wuaipojie2024_2.C类了</p>
+<p>其实这个地方可以看到signature（后面会用来进行签名校验的比较，所以这个题如果进行冲打包改了签名的话应该是不可以的）</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331754.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331242.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>关注第二个框框，结合下面的两个函数我们可以知道，这个地方就是getStaticMethod返回为<code>com.zj.wuaipojie2024_2.A</code> 类，d方法，而这个方法是通过read方法读取data目录下的decode.dex,然后再被fix函数调用生成2.dex（即被修复完成）</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312331660.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332387.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332610.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>所以我们现在有一个思路就是直接将data目录1.dex的数据赋值给decode.dex,然后再次运行程序获得修复完成的2.dex</p>
+<p>但是要注意，获得1.dex的时候要避免输入默认的正确的密码锁密码“01234”，不然不会走生成1.dex的checkpassword函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332067.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>继续再次运行但是发现原路径下没有2.dex，发现是在getStaticMethod将生成的2.dex删了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332294.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>使用frida尝试了下将2.dex勾出来，没成功</p>
+<p>换思路</p>
+<p>我们知道最后修复后是<code>com.zj.wuaipojie2024_2.A</code> 类中的d方法</p>
+<p>通过<code>com.p000zj.wuaipojie2024_2</code> 下的函数（分析参数传递）</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332408.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332749.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>再结合最初我们分析的isValidate的参数，发现这里的i,i2,i3即为<code>array.A_offset</code> 中的值</p>
+<p>使用NP管理器</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332055.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>使用ARSC打开方式</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332299.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332707.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>找到对应的值</p>
+<p>即   i &#x3D; 0 , i2 &#x3D; 3 , i3 &#x3D; 7908</p>
+<p>在fix函数中，发现偏移量的计算与encodeClassDate有关</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332571.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>跟进</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332027.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>发现对数据进行了toULEB128——通常用于将整数编码为无符号 LEB128 格式的字节数组，是一种变长编码方式，用于有效地编码小整数</p>
+<p>经过对比发现是标准编码，所以直接通过在线网站进行数转换即可</p>
+<p><a target="_blank" rel="noopener" href="http://www.dwenzhao.cn/cal/mcu/leb128.html">无符号LEB128编码转换 (dwenzhao.cn)</a></p>
+<p>7908 转换过来是E4 3D</p>
+<p>所以我们用010打开classes.dex，</p>
+<p>struct class_def_item_list dex_class_defs——&gt;struct class_def_item class_def[0]——&gt;struct class_data_item class_data——&gt;struct encoded_method_list direct_methods——&gt;struct encoded_method method[3]——&gt;struct uleb128 code_off</p>
+<p>然后修改下方的数据，修改后再次使用最开始的脚本进行恢复</p>
+<p>![Untitled](D:\笔记\笔记2\1\暑期考核题目wp edeb07c901e84bfaa9d0beabecb339a3\Untitled 26.png)</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332265.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>再次打开classes.dex，发现A.d数据被恢复</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs processing">publicstatic <span class="hljs-built_in">String</span> <span class="hljs-title function_">m1d</span>(Context context, <span class="hljs-built_in">String</span> <span class="hljs-built_in">str</span>) &#123;<br><br>        MainActivity.<span class="hljs-property">sSS</span>(<span class="hljs-built_in">str</span>);<br><br>        <span class="hljs-built_in">String</span> signInfo = Utils.<span class="hljs-property">getSignInfo</span>(context);<br><br><span class="hljs-keyword">if</span> (signInfo ==<span class="hljs-literal">null</span> || !signInfo.<span class="hljs-property">equals</span>(C0002C.<span class="hljs-property">SIGNATURE</span>)) &#123;<br><br><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<span class="hljs-comment">//签名校验，如果签名信息为空或不匹配预期的签名常量，返回空字符串</span><br><br>        &#125;<br><br>        StringBuffer stringBuffer =<span class="hljs-keyword">new </span><span class="hljs-class title_">StringBuffer</span>();<br><br><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><br><span class="hljs-keyword">while</span> (stringBuffer.<span class="hljs-property">length</span>() &lt; <span class="hljs-number">9</span> &amp;&amp; i &lt; <span class="hljs-number">40</span>) &#123;<br><br><span class="hljs-type">int</span> i2 = i + <span class="hljs-number">1</span>;<br><br>            <span class="hljs-built_in">String</span> substring = <span class="hljs-string">&quot;0485312670fb07047ebd2f19b91e1c5f&quot;</span>.<span class="hljs-property">substring</span>(i, i2);<br><br><span class="hljs-keyword">if</span> (!stringBuffer.<span class="hljs-property">toString</span>().<span class="hljs-property">contains</span>(substring)) &#123;<br><br>                stringBuffer.<span class="hljs-property">append</span>(substring);<br><br>            &#125;<br><br>            i = i2;<br><br>        &#125;<br><br><span class="hljs-keyword">return</span> !<span class="hljs-built_in">str</span>.<span class="hljs-property">equals</span>(stringBuffer.<span class="hljs-property">toString</span>().<span class="hljs-property">toUpperCase</span>()) ? <span class="hljs-string">&quot;&quot;</span> : <span class="hljs-string">&quot;唉!哪有什么亿载沉睡的玄天帝，不过是一位被诅咒束缚的旧日之尊，在灯枯之际挣扎的南柯一梦罢了。有缘人，这份机缘就赠予你了。坐标在B.d&quot;</span>;<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>分析这段代码我们可以知道stringBuffer长度为9，所以密码是“048531267”</p>
+<p>同时得到提示“坐标在B.d”处</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332341.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>通过之前在np管理器中获取的数据</p>
+<p>我们可以知道为[1,1,8108],8108转换后的数据是AC 3F</p>
+<p>同样找到B.d，修改code_off处数据</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332811.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332091.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>修改后继续使用脚本修复</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332924.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>所以flag是 </p>
+<p>flagmd5(sha1{048531267+’id’})</p>
+<h1 id="deeprev"><a href="#deeprev" class="headerlink" title="deeprev"></a>deeprev</h1><p>使用finger进行符号恢复</p>
+<p>找到main函数并进行重命名</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312332673.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>如下</p>
+<p>int __cdecl main(int argc, const char **argv, const char **envp)<br>{<br>double v3; &#x2F;&#x2F; xmm0_8<br>double v4; &#x2F;&#x2F; xmm1_8<br>double v5; &#x2F;&#x2F; xmm2_8<br>double v6; &#x2F;&#x2F; xmm3_8<br>double v7; &#x2F;&#x2F; xmm6_8<br>double v8; &#x2F;&#x2F; xmm7_8<br>__int64 v9; &#x2F;&#x2F; r8<br>__int64 v10; &#x2F;&#x2F; r9<br>double v11; &#x2F;&#x2F; xmm4_8<br>double v12; &#x2F;&#x2F; xmm5_8<br>__int64 v14; &#x2F;&#x2F; [rsp+0h] [rbp-20h]<br>unsigned int v15; &#x2F;&#x2F; [rsp+1Ch] [rbp-4h]<br>sub_402150();&#x2F;&#x2F;打开文件 “re3”,将 unk_4BC380 的内容写入到该文件中，然后关闭文件，调用 mprotect_0 函数设置内存保护<br>v15 &#x3D; fork();<br>if ( v15 )<br>{<br>sub_401F2F(v15);<br>remove(“re3”);<br>}<br>else<br>{<br>sub_44CC50(0LL, 0LL, 0LL, 0LL, v9, v10, (char)argv);<br>sub_44B680((__int64)”re3”, (__int64)”re3”, v3, v4, v5, v6, v11, v12, v7, v8, *(_QWORD *)(v14 + 8), 0LL);<br>}<br>return 0;<br>}</p>
+<p>学习一下fork的性质：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c9d0fab9516d?ivk_sa=1024320u">fork函数 - 简书 (jianshu.com)</a></p>
+<p>打开unk_4BC380将文件re3的数据提取出来</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs jsx">_int64 <span class="hljs-title function_">sub_402150</span>(<span class="hljs-params"></span>)<br>&#123;<br>__int64 v1; <span class="hljs-comment">// [rsp+8h] [rbp-8h]</span><br>v1 = <span class="hljs-title function_">sub_40CFA0</span>(<span class="hljs-string">&quot;re3&quot;</span>, <span class="hljs-string">&quot;wb&quot;</span>);<br><span class="hljs-title function_">fwrite</span>(&amp;unk_4BC380, 1LL, (unsigned int)b_length, v1);<br><span class="hljs-title function_">fclose</span>(v1);<br><span class="hljs-keyword">return</span> <span class="hljs-title function_">mprotect_0</span>(<span class="hljs-string">&quot;re3&quot;</span>, 511LL);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>通过数据长度b_length为5CF0h，lazy_dumper导出ELF数据，导出为ELF文件</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333525.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333691.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>将得到的ELF文件使用IDA打开，发现没有main函数，进入start函数，发现爆红无法生成伪代码，我们全选start函数后u取消识别，再次全选c识别成代码,Force强制转换成代码形式后再次在start点p创建函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333534.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>出现main函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333565.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>对绿色数据区域c转换成代码，再在main处p创建函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333716.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>得到main函数</p>
+<p>__int64 __fastcall main(int a1, char **a2, char **a3)<br>{<br>  struct __jmp_buf_tag env[1]; &#x2F;&#x2F; [rsp+10h] [rbp-850h] BYREF<br>  struct __jmp_buf_tag v5[1]; &#x2F;&#x2F; [rsp+E0h] [rbp-780h] BYREF<br>  struct __jmp_buf_tag v6[1]; &#x2F;&#x2F; [rsp+1B0h] [rbp-6B0h] BYREF<br>  struct __jmp_buf_tag v7[1]; &#x2F;&#x2F; [rsp+280h] [rbp-5E0h] BYREF<br>  char v8[640]; &#x2F;&#x2F; [rsp+350h] [rbp-510h] BYREF<br>  char v9[636]; &#x2F;&#x2F; [rsp+5D0h] [rbp-290h] BYREF<br>  int v10; &#x2F;&#x2F; [rsp+84Ch] [rbp-14h]<br>  int v11; &#x2F;&#x2F; [rsp+850h] [rbp-10h]<br>  int v12; &#x2F;&#x2F; [rsp+854h] [rbp-Ch]<br>  int v13; &#x2F;&#x2F; [rsp+858h] [rbp-8h]<br>  int v14; &#x2F;&#x2F; [rsp+85Ch] [rbp-4h]<br>  __int64 savedregs; &#x2F;&#x2F; [rsp+860h] [rbp+0h] BYREF</p>
+<p>  v14 &#x3D; 1;<br>  if ( a1 !&#x3D; 2 )<br>    return 0LL;<br>  ((void (__fastcall *)(char *, char **, char **))loc_2490)(a2[1], a2, a3);<br>  ((void (__fastcall *)(void *, char *, char *))loc_21F9)(&amp;unk_55C0, v9, v8);<br>  v13 &#x3D; _setjmp(env);<br>  if ( v13 &lt;&#x3D; 24 )<br>  {<br>    v11 &#x3D; _setjmp(v5);<br>    if ( v11 &lt; byte_50A0[25 * v13] )<br>    {<br>      if ( byte_50A0[25 * v13 + 1 + v11] !&#x3D; *((char *)&amp;savedregs + 25 * v13 + v11 - 655) )<br>        v14 &#x3D; 0;<br>      longjmp(v5, v11 + 1);<br>    }<br>    longjmp(env, v13 + 1);<br>  }<br>  v12 &#x3D; _setjmp(v6);<br>  if ( v12 &lt;&#x3D; 24 )<br>  {<br>    v10 &#x3D; _setjmp(v7);<br>    if ( v10 &lt; byte_5320[25 * v12] )<br>    {<br>      if ( byte_5320[25 * v12 + 1 + v10] !&#x3D; *((char *)&amp;savedregs + 25 * v12 + v10 - 1295) )<br>        v14 &#x3D; 0;<br>      longjmp(v7, v10 + 1);<br>    }<br>    longjmp(v6, v12 + 1);<br>  }<br>  if ( v14 &#x3D;&#x3D; 1 )<br>    puts(“GOOD JOB”);<br>  return 0LL;<br>}</p>
+<p>对loc_2490进行相同操作最后创建为函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333246.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>sub_2490即对数据进行读取并存储</p>
+<p>而loc_21F9则不行，经过c转换后可以看到int 3，所以我们猜测这个地方被做了处理，为smc或者其他加密形式，而可以猜测执行的时候这个地方是触发中断后将这个信号传递给主进程，然后主进程对这个地方进行解密</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333805.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>我们再回到最开始的题目进行分析</p>
+<p>打开父进程的函数，其中sub_44CC50可以得出是ptrace函数，而又因为我们知道在re3文件中是中断信号然后返回父进程，而这里刚好通过if中捕获中断状态（具体可以看下文）的值然后来分别进行两个相似的操作，所以我们可以判断re3文件中的是smc</p>
+<p>__int64 __fastcall sub_401F2F(unsigned int pid)<br>{<br>  __int64 v1; &#x2F;&#x2F; r8<br>  __int64 v2; &#x2F;&#x2F; r9<br>  unsigned int v3; &#x2F;&#x2F; ecx<br>  __int64 v4; &#x2F;&#x2F; rdx<br>  __int64 result; &#x2F;&#x2F; rax<br>  __int64 v6; &#x2F;&#x2F; r8<br>  __int64 v7; &#x2F;&#x2F; r9<br>  __int64 v8; &#x2F;&#x2F; r8<br>  __int64 v9; &#x2F;&#x2F; r9<br>  __int64 v10; &#x2F;&#x2F; r8<br>  __int64 v11; &#x2F;&#x2F; r9<br>  __int64 v12; &#x2F;&#x2F; r8<br>  __int64 v13; &#x2F;&#x2F; r9<br>  __int64 v14; &#x2F;&#x2F; r8<br>  __int64 v15; &#x2F;&#x2F; r9<br>  char v16; &#x2F;&#x2F; [rsp+0h] [rbp-130h]<br>  char v17; &#x2F;&#x2F; [rsp+0h] [rbp-130h]<br>  char v18; &#x2F;&#x2F; [rsp+0h] [rbp-130h]<br>  char v19; &#x2F;&#x2F; [rsp+0h] [rbp-130h]<br>  unsigned int v20; &#x2F;&#x2F; [rsp+10h] [rbp-120h]<br>  __int64 v21; &#x2F;&#x2F; [rsp+18h] [rbp-118h]<br>  int v22; &#x2F;&#x2F; [rsp+2Ch] [rbp-104h] BYREF<br>  unsigned __int64 v23[16]; &#x2F;&#x2F; [rsp+30h] [rbp-100h] BYREF<br>  __int64 v24; &#x2F;&#x2F; [rsp+B0h] [rbp-80h]<br>  unsigned __int64 v25; &#x2F;&#x2F; [rsp+108h] [rbp-28h]<br>  __int64 v26; &#x2F;&#x2F; [rsp+110h] [rbp-20h]<br>  __int64 v27; &#x2F;&#x2F; [rsp+118h] [rbp-18h]<br>  int i; &#x2F;&#x2F; [rsp+124h] [rbp-Ch]<br>  __int64 v29; &#x2F;&#x2F; [rsp+128h] [rbp-8h]</p>
+<p>  sub_44B360(pid, 0LL, 0);<br>  ptrace(7LL, pid, 0LL, 0LL, v1, v2, v16);      &#x2F;&#x2F; 通过调用系统调用 sys_ptrace 来对目标进程进行控制和调试<br>  v27 &#x3D; sub_401A30(pid);<br>  v3 &#x3D; sub_4017E5();<br>  result &#x3D; v4;<br>  v20 &#x3D; v3;<br>  v21 &#x3D; v4;<br>  for ( i &#x3D; 0; i &lt;&#x3D; 2; ++i )<br>  {<br>    v22 &#x3D; 0;<br>    sub_44B360(pid, &amp;v22, 0);<br>    result &#x3D; v22 &amp; 0x7F;<br>    if ( (v22 &amp; 0x7F) &#x3D;&#x3D; 0 )<br>      break;<br>    ptrace(12LL, pid, 0LL, v23, v6, v7, v17);<br>    v26 &#x3D; v24 - 1;<br>    v25 &#x3D; ptrace(1LL, pid, v24 - 1, 0LL, v8, v9, v18);<br>    if ( v25 &#x3D;&#x3D; 0xCAFEB055BFCCLL )<br>    {<br>      v29 &#x3D; v26;<br>      decode(pid, v26, v27, v20, v21);&#x2F;&#x2F;经过分析和下面的encode函数形式基本是一样的<br>      v24 &#x3D; v26 + 10;<br>      ptrace(13LL, pid, 0LL, v23, v12, v13, v19);<br>    }<br>    else if ( v25 &#x3D;&#x3D; 0xCAFE1055BFCCLL )<br>    {<br>      encode(pid, v29, v26, v27, v20, v21);<br>      v24 &#x3D; v26 + 10;<br>      ptrace(13LL, pid, 0LL, v23, v14, v15, v19);<br>    }<br>    result &#x3D; ptrace(7LL, pid, 0LL, 0LL, v10, v11, v19);<br>  }<br>  return result;<br>}</p>
+<p>上面的分析中我们可以通过对ptrace函数的第一个参数按m，然后搜索ptrace，获得具体的函数名称</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333403.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>而ptrace的函数原型：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">long</span> ptrace（<span class="hljs-class"><span class="hljs-keyword">enum</span> _<span class="hljs-title">ptrace_request</span> <span class="hljs-title">request</span>,<span class="hljs-title">pid_t</span> <span class="hljs-title">pid</span>,<span class="hljs-title">void</span> * <span class="hljs-title">addr</span> ,<span class="hljs-title">void</span> *<span class="hljs-title">data</span>）;</span><br></code></pre></td></tr></table></figure>
+
+<p>对照下图作用：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333771.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>进入sub_44B360：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">unsigned</span> __int64 __fastcall <span class="hljs-title function_">sub_44B360</span><span class="hljs-params">(<span class="hljs-type">pid_t</span> a1, <span class="hljs-type">int</span> *a2, <span class="hljs-type">int</span> a3)</span><br>&#123;<br>  <span class="hljs-type">unsigned</span> __int64 result; <span class="hljs-comment">// rax</span><br>  <span class="hljs-type">unsigned</span> __int64 v4; <span class="hljs-comment">// rax</span><br>  <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> v5; <span class="hljs-comment">// r8d</span><br>  <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> upid; <span class="hljs-comment">// [rsp+8h] [rbp-18h]</span><br><br>  <span class="hljs-keyword">if</span> ( __readfsdword(<span class="hljs-number">0x18</span>u) )<br>  &#123;<br>    _librt_enable_asynccancel();<br>    v4 = sys_wait4(a1, a2, a3, <span class="hljs-number">0LL</span>);<br>    <span class="hljs-keyword">if</span> ( v4 &gt; <span class="hljs-number">0xFFFFFFFFFFFFF000</span>LL )<br>    &#123;<br>      __writefsdword(<span class="hljs-number">0xFFFFFFC0</span>, -v4);<br>      LODWORD(v4) = <span class="hljs-number">-1</span>;<br>    &#125;<br>    upid = v4;<br>    _librt_disable_asynccancel(v5);<br>    <span class="hljs-keyword">return</span> upid;<br>  &#125;<br>  <span class="hljs-keyword">else</span><br>  &#123;<br>    result = sys_wait4(a1, a2, a3, <span class="hljs-number">0LL</span>);<br>    <span class="hljs-keyword">if</span> ( result &gt; <span class="hljs-number">0xFFFFFFFFFFFFF000</span>LL )<br>    &#123;<br>      __writefsdword(<span class="hljs-number">0xFFFFFFC0</span>, -result);<br>      <span class="hljs-keyword">return</span> <span class="hljs-number">0xFFFFFFFF</span>LL;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>分析发现这个函数就是父进程等待子进程，接收子进程信号</p>
+<p>所以我们改变函数名称后</p>
+<p>如图</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333210.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>在sub_4017E5中</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333907.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>我们会发现很多很奇怪的数据，分析这个函数就是在提取下面的数据</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333453.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>退出继续看</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333458.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>发现v25处的比较数据看上去有点奇怪</p>
+<p>我们去提取出来的ELF中找找</p>
+<p>可以分别在21F9的开头处和结尾处看到使用mov将刚刚上面提到的两个值赋值到寄存器，所以我们可以推断v24-1返回地址处的值v25即为此处值</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333554.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333977.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>在调试过程中，发现arr处为8723，与刚刚在函数中提取到的奇怪数据是一样的</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333465.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333569.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>h进行十六进制的转换，发现是2213</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333731.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>刚好于与re3中mov 后的地址是吻合的，所以我们猜测其实刚刚奇怪数据的地方是在传入子进程里面的对应地址的数据</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333672.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>在解密函数里面，根据PTRACE_PEEKTEXT的性质我们知道v28就是我们最后需要获取的解密数据</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333138.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>那么其实分析下来最后程序的逻辑就是</p>
+<p>父进程等待子进程运行，然后子进程中通过int 3进行切换到主程序中的判断语句，然后通过Mov xxx赋值来进行先解密运行完成后再加密回去的操作。而v28经过调试其实可以发现是最开始的奇怪数据中的后半部分解密函数后经过</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333600.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>处理后得到的数据</p>
+<p>使用idapython打印即可</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">print(hex(get_reg_value(<span class="hljs-string">&quot;RAX&quot;</span>),end= <span class="hljs-string">&quot; , &quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>但貌似不大行，试了很多次，后面才知道进入解密处的时候调试是需要传入参数的</p>
+<p>也可以解密后直接去最开始的地方提取数据</p>
+<p>获得：</p>
+<p>xorKey &#x3D; {8723: 2533025110152939745, 8739: 5590097037203163468, 8755: 17414346542877855401, 8771: 17520503086133755340, 8787: 12492599841064285544, 8803: 12384833368350302160, 8819: 11956541642520230699, 8835: 12628929057681570616, 8851: 910654967627959011, 8867: 5684234031469876551, 8883: 6000358478182005051, 8899: 3341586462889168127, 8915: 11094889238442167020, 8931: 17237527861538956365, 8947: 17178915143649401084, 8963: 11176844209899222046, 8979: 18079493192679046363, 8995: 7090159446630928781, 9011: 863094436381699168, 9027: 6906972144372600884, 9043: 16780793948225765908, 9059: 7086655467811962655, 9075: 13977154540038163446, 9091: 7066662532691991888, 9107: 15157921356638311270, 9123: 12585839823593393444, 9139: 1360651393631625694, 9155: 2139328426318955142, 9171: 2478274715212481947, 9187: 12876028885252459748, 9203: 18132176846268847269, 9219: 17242441603067001509, 9235: 8492111998925944081, 9251: 14679986489201789069, 9267: 13188777131396593592, 9283: 5298970373130621883, 9299: 525902164359904478, 9315: 2117701741234018776, 9331: 9158760851580517972}</p>
+<p>addr &#x3D; 0x2213</p>
+<p>while True:<br>    data &#x3D; get_qword(addr)<br>    key &#x3D; xorKey[addr]<br>    dec &#x3D; data ^ key<br>    idc.patch_qword(addr, dec)<br>    addr +&#x3D; 16</p>
+<p>将上面脚本放到re3里面运行，运行后去除一些0和int 3</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312333293.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><code class="hljs c">BYTE *__fastcall <span class="hljs-title function_">sub_21F9</span><span class="hljs-params">(__int64 a1, __int64 a2, __int64 a3)</span><br>&#123;<br>  _BYTE *result; <span class="hljs-comment">// rax</span><br>  <span class="hljs-type">int</span> v4; <span class="hljs-comment">// [rsp+20h] [rbp-28h]</span><br>  <span class="hljs-type">int</span> v5; <span class="hljs-comment">// [rsp+24h] [rbp-24h]</span><br>  <span class="hljs-type">char</span> v6; <span class="hljs-comment">// [rsp+28h] [rbp-20h]</span><br>  <span class="hljs-type">int</span> v7; <span class="hljs-comment">// [rsp+2Ch] [rbp-1Ch]</span><br>  <span class="hljs-type">int</span> j; <span class="hljs-comment">// [rsp+30h] [rbp-18h]</span><br>  <span class="hljs-type">int</span> v9; <span class="hljs-comment">// [rsp+34h] [rbp-14h]</span><br>  <span class="hljs-type">int</span> v10; <span class="hljs-comment">// [rsp+38h] [rbp-10h]</span><br>  <span class="hljs-type">char</span> v11; <span class="hljs-comment">// [rsp+3Ch] [rbp-Ch]</span><br>  <span class="hljs-type">int</span> v12; <span class="hljs-comment">// [rsp+40h] [rbp-8h]</span><br>  <span class="hljs-type">int</span> i; <span class="hljs-comment">// [rsp+44h] [rbp-4h]</span><br><br>  <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">24</span>; ++i )<br>  &#123;<br>    v12 = <span class="hljs-number">0</span>;<br>    v11 = <span class="hljs-number">0</span>;<br>    v10 = <span class="hljs-number">0</span>;<br>    v9 = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> ( v12 &lt;= <span class="hljs-number">24</span> )<br>    &#123;<br>      <span class="hljs-keyword">if</span> ( *(_BYTE *)(<span class="hljs-number">25</span> * i + v12 + a1) )<br>      &#123;<br>        ++v11;<br>        v10 = <span class="hljs-number">1</span>;<br>      &#125;<br>      <span class="hljs-keyword">else</span><br>      &#123;<br>        <span class="hljs-keyword">if</span> ( v10 )<br>        &#123;<br>          *(_BYTE *)(a2 + <span class="hljs-number">25LL</span> * i + v9) = v11;<br>          v11 = <span class="hljs-number">0</span>;<br>          ++v9;<br>        &#125;<br>        v10 = <span class="hljs-number">0</span>;<br>      &#125;<br>      <span class="hljs-keyword">if</span> ( ++v12 == <span class="hljs-number">25</span> &amp;&amp; v10 )<br>      &#123;<br>        *(_BYTE *)(a2 + <span class="hljs-number">25LL</span> * i + v9) = v11;<br>        v11 = <span class="hljs-number">0</span>;<br>        ++v9;<br>      &#125;<br>    &#125;<br>    result = (_BYTE *)(<span class="hljs-number">25LL</span> * i + a2);<br>    *result = v9 - <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">for</span> ( j = <span class="hljs-number">0</span>; j &lt;= <span class="hljs-number">24</span>; ++j )<br>  &#123;<br>    v7 = <span class="hljs-number">0</span>;<br>    v6 = <span class="hljs-number">0</span>;<br>    v5 = <span class="hljs-number">0</span>;<br>    v4 = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> ( v7 &lt;= <span class="hljs-number">24</span> )<br>    &#123;<br>      <span class="hljs-keyword">if</span> ( *(_BYTE *)(<span class="hljs-number">25</span> * v7 + j + a1) )<br>      &#123;<br>        ++v6;<br>        v5 = <span class="hljs-number">1</span>;<br>      &#125;<br>      <span class="hljs-keyword">else</span><br>      &#123;<br>        <span class="hljs-keyword">if</span> ( v5 )<br>        &#123;<br>          *(_BYTE *)(a3 + <span class="hljs-number">25LL</span> * j + v4) = v6;<br>          v6 = <span class="hljs-number">0</span>;<br>          ++v4;<br>        &#125;<br>        v5 = <span class="hljs-number">0</span>;<br>      &#125;<br>      <span class="hljs-keyword">if</span> ( ++v7 == <span class="hljs-number">25</span> )<br>      &#123;<br>        <span class="hljs-keyword">if</span> ( v5 )<br>        &#123;<br>          *(_BYTE *)(a3 + <span class="hljs-number">25LL</span> * j + v4) = v6;<br>          v6 = <span class="hljs-number">0</span>;<br>          ++v4;<br>        &#125;<br>      &#125;<br>    &#125;<br>    result = (_BYTE *)(<span class="hljs-number">25LL</span> * j + a3);<br>    *result = v4 - <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>根据搜索得知这个是数织，先盲用上面的两个数组数据去在线网站盲试，结果不行</p>
+<p>所以我们的思路是去看看哪里对这个进行了修改，前往init段和preinit段，修复一下函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334923.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>char *sub_265C()<br>{<br>  unsigned int v0; &#x2F;&#x2F; eax<br>  char *result; &#x2F;&#x2F; rax<br>  char v2[639]; &#x2F;&#x2F; [rsp+0h] [rbp-300h] BYREF<br>  char needle[2]; &#x2F;&#x2F; [rsp+27Fh] [rbp-81h] BYREF<br>  char v4; &#x2F;&#x2F; [rsp+281h] [rbp-7Fh]<br>  char v5[4]; &#x2F;&#x2F; [rsp+282h] [rbp-7Eh] BYREF<br>  __int16 v6; &#x2F;&#x2F; [rsp+286h] [rbp-7Ah]<br>  char v7[4]; &#x2F;&#x2F; [rsp+288h] [rbp-78h] BYREF<br>  __int16 v8; &#x2F;&#x2F; [rsp+28Ch] [rbp-74h]<br>  char v9[2]; &#x2F;&#x2F; [rsp+28Eh] [rbp-72h] BYREF<br>  char v10; &#x2F;&#x2F; [rsp+290h] [rbp-70h]<br>  char format[8]; &#x2F;&#x2F; [rsp+291h] [rbp-6Fh] BYREF<br>  int v12; &#x2F;&#x2F; [rsp+299h] [rbp-67h]<br>  __int16 v13; &#x2F;&#x2F; [rsp+29Dh] [rbp-63h]<br>  char v14; &#x2F;&#x2F; [rsp+29Fh] [rbp-61h]<br>  char haystack[16]; &#x2F;&#x2F; [rsp+2A0h] [rbp-60h] BYREF<br>  char s[32]; &#x2F;&#x2F; [rsp+2B0h] [rbp-50h] BYREF<br>  __int64 v17; &#x2F;&#x2F; [rsp+2D0h] [rbp-30h]<br>  int v18; &#x2F;&#x2F; [rsp+2DCh] [rbp-24h]<br>  FILE *stream; &#x2F;&#x2F; [rsp+2E0h] [rbp-20h]<br>  int ii; &#x2F;&#x2F; [rsp+2E8h] [rbp-18h]<br>  int n; &#x2F;&#x2F; [rsp+2ECh] [rbp-14h]<br>  int m; &#x2F;&#x2F; [rsp+2F0h] [rbp-10h]<br>  int k; &#x2F;&#x2F; [rsp+2F4h] [rbp-Ch]<br>  int j; &#x2F;&#x2F; [rsp+2F8h] [rbp-8h]<br>  int i; &#x2F;&#x2F; [rsp+2FCh] [rbp-4h]</p>
+<p>  *(_QWORD *)format &#x3D; 0xEAABA1EDE1FCFEA1LL;<br>  v12 &#x3D; -268763743;<br>  v13 &#x3D; -1030;<br>  v14 &#x3D; -3;<br>  *(_WORD *)v9 &#x3D; -5399;<br>  v10 &#x3D; -20;<br>  *(_DWORD *)v7 &#x3D; -268633374;<br>  v8 &#x3D; -5139;<br>  *(_DWORD *)v5 &#x3D; -268633347;<br>  v6 &#x3D; -5139;<br>  *(_WORD *)needle &#x3D; -5401;<br>  v4 &#x3D; -17;<br>  for ( i &#x3D; 0; i &lt;&#x3D; 14; ++i )<br>    format[i] ^&#x3D; 0x8Eu;<br>  for ( j &#x3D; 0; j &lt;&#x3D; 2; ++j )<br>    v9[j] ^&#x3D; 0x8Eu;<br>  for ( k &#x3D; 0; k &lt;&#x3D; 5; ++k )<br>    v7[k] ^&#x3D; 0x8Eu;<br>  for ( m &#x3D; 0; m &lt;&#x3D; 5; ++m )<br>    v5[m] ^&#x3D; 0x8Eu;<br>  for ( n &#x3D; 0; n &lt;&#x3D; 5; ++n )<br>    needle[n] ^&#x3D; 0x8Eu;<br>  v0 &#x3D; getppid();<br>  snprintf(s, 0x1EuLL, format, v0);<br>  stream &#x3D; fopen(s, “r”);<br>  fgets(haystack, 16, stream);<br>  fclose(stream);<br>  result &#x3D; (char *)(strstr(haystack, needle) || strstr(haystack, v9) || strstr(haystack, v7) || strstr(haystack, v5));<br>  v18 &#x3D; (int)result;<br>  if ( !(_DWORD)result )<br>  {<br>    qmemcpy(v2, &amp;unk_32A0, 0x271uLL);<br>    result &#x3D; (char *)&amp;unk_5834 - 1940;<br>    v17 &#x3D; (__int64)&amp;unk_5834 - 1940;<br>    for ( ii &#x3D; 0; ii &lt;&#x3D; 24; ++ii )<br>      result &#x3D; (char *)memcpy((void *)(25 * ii + v17), &amp;v2[25 * ii], (unsigned __int8)v2[25 * ii] + 1);<br>  }<br>  return result;<br>}</p>
+<p>__int64 sub_257D()<br>{<br>  char v1[640]; &#x2F;&#x2F; [rsp+0h] [rbp-290h] BYREF<br>  __int64 v2; &#x2F;&#x2F; [rsp+280h] [rbp-10h]<br>  int i; &#x2F;&#x2F; [rsp+28Ch] [rbp-4h]</p>
+<p>  qmemcpy(v1, &amp;unk_3020, 0x271uLL);<br>  v2 &#x3D; (__int64)&amp;unk_5838 - 1304;<br>  for ( i &#x3D; 0; i &lt;&#x3D; 24; ++i )<br>    memcpy((void *)(25 * i + v2), &amp;v1[25 * i], (unsigned __int8)v1[25 * i] + 1);<br>  return nullsub_2();<br>}</p>
+<p>可以看到上面两个函数的赋值操作,到&amp;unk_32A0和&amp;unk_3020，把它们dump出来，然后按每 25个数据取出非0的数字就可以了（第一个数据是显示当前有多少非0的数，也不需要），可以手搓</p>
+<p>box1 &#x3D; [0x05, 0x05, 0x05, 0x03, 0x01, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0A, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x01, 0x01, 0x05,<br>        0x01, 0x03, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x05, 0x01, 0x02, 0x04, 0x05, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x05, 0x02, 0x01, 0x01, 0x01, 0x01, 0x01,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05,<br>        0x01, 0x01, 0x01, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x01, 0x02, 0x06, 0x01, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x02, 0x02, 0x01, 0x01,<br>        0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x06, 0x02, 0x05, 0x01, 0x03, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x03,<br>        0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x02,<br>        0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x02, 0x05, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x03, 0x05, 0x01, 0x01, 0x01,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x08, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x01, 0x01, 0x01, 0x03, 0x05, 0x05, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x01, 0x03,<br>        0x05, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x03, 0x01, 0x01, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x05, 0x01, 0x02, 0x04, 0x01, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x04, 0x01, 0x01, 0x04, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x01, 0x01, 0x02, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x05, 0x04, 0x03,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x04, 0x02, 0x05, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x05, 0x03, 0x01, 0x01, 0x01, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,<br>        0x01, 0x02, 0x01, 0x01, 0x01, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]<br>box2 &#x3D; [0x06, 0x05, 0x01, 0x03, 0x02, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x03, 0x01, 0x03,<br>        0x01, 0x04, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x08, 0x01, 0x01, 0x01, 0x02, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x01, 0x04, 0x01, 0x03, 0x02, 0x01, 0x03,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x04, 0x04, 0x04, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x01, 0x02, 0x02, 0x01,<br>        0x02, 0x01, 0x02, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x08, 0x01, 0x01, 0x01, 0x01, 0x03, 0x04, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0A, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,<br>        0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x03,<br>        0x01, 0x03, 0x01, 0x04, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x01, 0x01, 0x04, 0x01, 0x01,<br>        0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x07, 0x08, 0x01, 0x01, 0x01, 0x01, 0x02, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x04, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0A, 0x02, 0x02,<br>        0x01, 0x02, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x05, 0x02, 0x05, 0x01, 0x01, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x06, 0x0C, 0x02, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x02, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x04, 0x07, 0x02,<br>        0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x09, 0x01, 0x01, 0x02, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x0C, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04,<br>        0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x02, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,<br>        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]<br>import binascii<br>import binhex<br>print(bytes.fromhex(hex(0xEAE7 ^ 0x8e8e)[2:]))<br>box1 &#x3D; box1[:625]<br>print(box2 &#x3D;&#x3D; box1)<br>import numpy</p>
+<h1 id="box1-numpy-array-box1-reshape-25-25"><a href="#box1-numpy-array-box1-reshape-25-25" class="headerlink" title="box1 &#x3D; numpy.array(box1).reshape(25, 25)"></a>box1 &#x3D; numpy.array(box1).reshape(25, 25)</h1><p>box1 &#x3D; numpy.array(box2).reshape(25, 25)<br>for x in box1:<br>    t &#x3D; x[1:]<br>    print(“ “.join(map(hex, t)))</p>
+<p>拿到在线网站上去试</p>
+<p><a target="_blank" rel="noopener" href="https://handsomeone.github.io/Nonogram/#solver">Nonogram (handsomeone.github.io)</a></p>
+<p>flag{I LOVE PLAY ctf_QWB 2022}</p>
+<h1 id="Ferris-proxy"><a href="#Ferris-proxy" class="headerlink" title="Ferris_proxy"></a>Ferris_proxy</h1><p>分析题目可知题目意思应该是两个程序之间的通信被流量包所捕获，我们需要解密这个流量包找到其中的flag</p>
+<p>前述：</p>
+<p>wireshark可以捕获一般的网络数据包文件，例如cap，pcap，pcapng，pcap.gz这几种，前三种直接双击打开即可，最后一种拖入wireshark即可</p>
+<p>打开后如下</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334174.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>我们可以根据</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zzwwhhpp/article/details/113077747">网络分析工具——WireShark的使用（超详细）-CSDN博客</a>中</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334402.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>比对知道中间的为数据列表区域</p>
+<p>下图中的框住的三行代表TCP的三次握手</p>
+<p>过程分别为：</p>
+<p>1.客户端发送一个SYN&#x3D;1，ACK&#x3D;0标志的数据包给服务端，请求进行连接</p>
+<p>2.服务端收到请求并且允许连接的话，就会发送一个SYN&#x3D;1，ACK&#x3D;1标志的数据包给发送端，告诉它，可以通讯了，并且让客户端发送一个确认数据包</p>
+<p>3.服务端发送一个SYN&#x3D;0，ACK&#x3D;1的数据包给客户端，告诉它连接已被确认，这就是第三次握手。TCP连接建立，开始通讯。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334053.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>所以我们可以通过框出来的地方知道客户端（client)是50671，服务端(server)是8888</p>
+<p>当然也可以使用strace命令对题目中的client进行查看，发现客户端的端口是8888</p>
+<p>因为这里是客户端向服务端发送信息，所以我们的追踪过程应该是从本机端口50671到本机端口8888，data就在这么一个模式的数据包中，所有50671-&gt;8888的发送包下都有一个data数据，所以我们捕获发送数据</p>
+<p>通过右键点击第三次握手，选择追踪流</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334715.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>获取从客户端到服务端的数据</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334043.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>在下方选择原始数据形式后</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334948.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>分析流量包</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334996.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>得到数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-number">00000008000000000000000000000008000000000000000100000048000000010000000001001</span>db2ee547837c2b0394f9316a3c672109c854769d9627ce715aa82ae76af4fc7d468903ffa4f7c9d4afcf139528ceb24cb5f64a192287282ee7fd076992f000000480000000100000000e73f0a730b98e032e90afaf73b8ddab1e821432c3e1c2c51396914f53fb304f26cbc8f85ec68462ff85dfb0979648d43003291ccb9418e7b4016f5d3325d4083000000480000000100000000d44c5aff410f28c841fb51c2e982244d7f7370fb6b73d6e5caba56c1b4b8f96bea190aa8d66e7e37d76fe2e5fef7f78b0de90e12eefda3a36177583412ca074e00000048000000010000000096a1796af867e440a72ee81e36e05f3b73c3341f6166b804bf83c3d0b47df74cc77405595ce44d3ccfb739496b8acb78fdb02bcd510851b3e3de015fc06eadb40000000a00000001000000000f8e0000004800000001000000010100320b119809b793abf357a7f78b0742ee93a957e563a5a94fdb09804e89596f2597a2cb9ae9f5161d5fda88ff050e47b1d28bebc6563465d2e7959e8a624a000000480000000100000001cd39b2053c17021f93030e3b9bc7149ff5423faf64693932f76a8dbffa526fff7c076845b1d31967efca0b56b066e8bacedc1927e629c6d0e87f61bf14ee3039000000480000000100000001053d668ef1855426257ce68cdbc2f66919a2f9efbcb632daa6170cb8246ab7a2348032f48cefdbc3aadcee6b9ab867371346bbe90fd69d213705ed1de38922b300000048000000010000000145bbbf8e0b10c5436e5974f46426d3efdbeaba819ea5d049bb420219a426336e14bc36e5753cb71fb21a2b78f699918a0045a8badddd69646ed65a59e17feec80000000a0000000100000001b30c000000280000000100000001503fdd267309866142ae96b3197515b72ccd766dedbc09d61c25f0c3fa79ebd40000002800000001000000002accc966ccaf48a147471171fb9589c95c561100d6548ad979f328e43bcfe0750000002c00000001000000000000001023a5457e1fa2e2f4a23242b1e61a597d1458bee4871e6f44e9296820014728300000002c000000010000000100000010bd688bc8657972730f1d9a5c340cd555602957fa44cf643423bb23734bf8490b0000003c000000010000000000000020a6f95ec809bac678aa1f4a74a0094e00d33e42da057331c95a61c6b5c3cd24daefeb367e01d3765e91643e37e2ac95e90000003c000000010000000100000020184ff5940c47e4fc42a2bd1f61b304f5fdfc5e453104a3946d06c4897a86f7d2872c948ff06b270b4d024446df8b60fa0000004800000001000000000000020044f4cf64a905e470a2d8091e5320c0b8a370193fe44728340c454361c84578f3b469963d12fa608ab96bf2e8c9c2116010d50e151b6407308d3cb6a2000000480000000100000000bc02026a76b5be1d66cf03d90ea5303a5091b48d370ac186402138606da35c90fe7efb0a21f0a177896f496ba40f02e079b82218be0124ab7de5d4f48cfd921e000000480000000100000000323d2847d03880fa5cb48533939141115c3dc15fa32a82be59d78826e3d37f5cac12010ce10c850df63626f94657a5beacf7d502b59fc10f571959ce6101b8d6000000480000000100000000704e541c930ca3a8d156d7f6122fda7bbdffed9b9bc6160f4ec8ace48978bd458869a636a7d8798d7dbd503e0c41aad82496578df4fbffbd3c5c885dc0bd3dee0000004800000001000000006d6af1efc82365f1619286e7a612155d87038f4ccb39e25e0660f9f2d320ae4321996b69187ba68abdf3e6ab41abfa2dd359c7eaa5d344fc1acb97b58dd44d86000000480000000100000000d444d17c165ee78e1d55f5c42b1f1bcf9c0f302588b68d26d2a308250c42d1df13be07693aa0f42cefcb9dc1688216478a1a041c9a0c66308b3e4a5135fd2f0f0000004800000001000000002c7d9df81c7c9ccb7422089f94c0fa54067e6c4fc634c725c9aa9710aaedd671f72cf9287f38de6111ace6c0c32ed568569b45743abfc519e23aabccdf30a9af000000480000000100000000d1bbcab1224daf8ccfb5e6dbf42ee924935b990eee7abe70ac5537426236e0ff1b2ac4748c665d3aba61c4685798ae62126d89220cd5ae8c6a7c32e33ce1236d0000001c0000000100000000b802088e5e303c8389880c09c3925053cc210825000000080000000200000000000000480000000100000001000001d06fe6d3c4b7761ffea3dea5ca1b75305f3bd828925e041baabc00aa51f93e5d59aa6c5c024e1de93ccabbcc7736271de03665a2b170a42faca2e869980000004800000001000000016c6b50fecd4e0e1a9ca070fafa04c06a12f27af94d5430ccce129ada67c3040d444b772758195366025267bfea9e35cbaaf816022b34755d5ac2a4d7df857732000000480000000100000001ede0bf60b0ca23f40635dcbda76eaf3b59faa140dee0b2480aacd8df765ba5cfd1347f22c9415006210eb4f224332b5cfcac7be98e0da94f74693d8af22e1fad0000004800000001000000010614feada5c2aa494e61a0b2a848b82833860d6c1213c4aceebcbe55f419403ecd843835f14f2caa8310be6bfad7ad2054df500a54268b17530183ef4c49f1c50000004800000001000000011ed33f223e632356012a42484c1241d41ec5426ba94c0c4887a8206b86b41ac73ca8b79d90256d391190bcb2256e881642c5a0fbc178691cf9ec983e1f1db4000000004800000001000000012c5043530d28ce81e89c0a71baeb821ff0240d18fbac0e01b0952bb62b91354597b9061dc440318ce3eabd95742607546c414ebf3da32879b2af3500d08cb4e9000000480000000100000001b404a5293b85aadaa3d595d38992c219ddd7a4e5f00c09af477eea99477b3d53ac6b67c49f0cbd5a7ff038904dfc1a3b58cabe2c25dcb86fa55a53f3d362f0510000002c000000010000000128bf591667dcd1d600abe1db48f49b17a5ad9d5650f7793af7a24341b771a9247f1eb4800000000800000002000000010000000800000000000000020000000800000000000000030000004800000001000000030100abcf924576de63087c8695ccda3705e8670c770f2bfda1dafdeddcd09b2aa6d485c6a87ff31c14300ddb660576ceed52047318a30d3c05c9848b0a1fb05300000048000000010000000387d378e9cbb8914e496a633595c7f68da097afd4fbd0380b4eafe790ffe999b81ceeff32eea4d8fa4279606c7c491ec4eb4a7ef5bf614307c21bd3a314db9d2e000000480000000100000003e9f505f08c464e1f5f123bcc180305bb5a30f2c382493a1cc6d6e5e189e75950f75c8a790aef2c1fae18436c9d6f4840a9eacbf04139a2b25042c27f3a3fd756000000480000000100000003faeaff92d731e354d03dc46cbe8a001188dde35e753c259de359181678d94e47d90709345f6c9975288dbecfe1a6cf2eb7a14978854bbc73d3ac7d0a72cc3ef40000000a0000000100000003c41a0000004800000001000000020100d92f41b75bb8ced6be2fbbc0ba1cfeeebdf15826ce92ba78ef4cd0f6d47ff04e9e593cfc5fc7eac8109effce7e75f547873ab559186885edf0e519f73aed00000048000000010000000243421e08dea79fd12889b2845ca365803bb4aa23c50d0c298e6649121b6d9101f32d15a043ffdbc93e7665617fa7b4b3f01db76f5472c5aa3a085da5683efcc4000000480000000100000002bf9a240df9afc3596d4b3613ae9a2184340561c896a60cc577e6ca507b5e6548ccfcd8bccf27de73deaaf04fab707a20c6aa94febdf8a0a5532c0f4c73958e11000000480000000100000002fc1437567ccd886b5496cabb117993f31afe25f53d92721877892e472bf8bba1743b827e277f500d51b7f74f4682e943be0d3ebfdc30742e211dc3eba51dac8b0000000a00000001000000029074000000280000000100000003e836256016a5f8ca1e29732b7332d9776bdc6694a9df6c1172183f65916f83d50000002c000000010000000300000010f46cbf6896be858f5c2f86ee3c162359c545b1f5bd1eec0cd03e2b7bf9c1b4b90000003c000000010000000300000020c580aa8aad81a2800fadf74749e79c323da65a6d11e8fb517d60ba36a0113b345be7c0fce390fba664776b676d82fdbe000000480000000100000003000002002292a593b68fdbf615d43c123747cf1f1583619708368b471b4a37c8eed21e07d14a7bf309f45335592134c5cc7a18152de20bb7d2fb753bee9131d90000004800000001000000033076a9d57efa379e4f7f4700116d786c586b49523454dd9b3ae7cfde0416d9bfbb486eed31f88fec8128cd1e0bf783c8978c04fde5f1bbe67ecbe1c76e0596f5000000480000000100000003579bbdb311093c2a3bb58b848be88302ab2bb6c24bf076a694de2b2fa1a8eff53fcaa6800e938bdeee831498fcc72cc9b822dad5b2074d5bc292c766e44c13e000000048000000010000000331fffa94345676f294eceb259baa51107267136af1e829868e1a3c5e2514517bfcfaec78783afde2874c6d2f4cb8436ed421e67fe327e8c67c851da9446ef226000000480000000100000003daff3194609bf5a05c1e6ec1e085854275ee81dbee01c92e2cb357faeba811424b80bd9b204d70675aaf026f2f23bb0e882271bad34ff5294cc05cd7fc0740ac0000004800000001000000034b5b49ca009d1836cfa176112aaf7775fa8c241bd45f861c1eec34dd2b9654e8144c74c1f80c9e0f23cae4503ae85de975f74d250be667a1f6285c9951a8f8c90000004800000001000000032fb4e2dd32d6fdd7e93fe24e23b9762099e1b12f5d9cae6dae7df3401e33931a8af65803c1538716bdba05948c8818f92791010ef8d6d315fb97bccdf2c2fbbf000000480000000100000003b97cd2e80a232dcf417da8ac1b835bf9dab15816bc1e2e0c07214e531ac922ca2f5ddbb26f8d599805feb5f6ae1c6e3fe08ef5cf7dbd60eb407892d6e72a67a30000001c0000000100000003e7d781f18b675dad11f1f49600057e8094628ad00000002800000001000000024ac9c87b674dcd932d2e9d3a4b7c16a3989e750fa3a8895e8dd0971c56fb96780000002c000000010000000200000010cf6ca67cfe59cd5f110c1586de9c2186cfb7213784043ffb017fdf5cfa74ac320000003c000000010000000200000020a03a82bae4627fc74de8c75437e5b077aa3d63e5745f61f47362954b80f53ede6867267605b7383f55e6a80aefcae153000000080000000200000003<br></code></pre></td></tr></table></figure>
+
+<p>现在开始分析client程序</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334747.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>rust写的，嘶</p>
+<p>shift +F12 走一波 ，最开始硬编码处点开也可以看到，</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334700.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>信息如下：</p>
+<p>获得RSA公钥和私钥</p>
+<ul>
+<li><p>—-BEGIN RSA PUBLIC KEY—–<br>MIIBCgKCAQEA231sNrX6WxlQpfsy8u6VR9rw4H4lY93fspAmXefjDhQhYCPM+SypBvIgb&#x2F;w9f8AGkEwUlDQxfZCClz72GAuS9jrlsqg9LpSMZ+PJA<br>O0BDWisJCJtyyENW&#x2F;9VVPpJLA0SSeYuTYJ84WDAcjsb0T++V97TXlSiq9svXt16LDxCQJjRXv9O1UTBkDpGGZmnR4xLiQT+Px6KOqAsrJcAF0EJa<br>ji5aBfHVQdrXQwgmq8PEsfnvp2iQCLZ2iDPLlGbRahdFeigXXT4L6UvjpbFr&#x2F;9INvDb2+vQkRl7zlHVtUAMR4X5smW2nHHH5YyTi1cOvMFsN+oPG<br>xgBGpSqYCxmPwINwIDAQAB<br>—–END RSA PUBLIC KEY—–</p>
+</li>
+<li><p>mkey:explorer</p>
+</li>
+<li><p>—-BEGIN PRIVATE KEY—–<br>MIIEvQIBADANBgkqhkiG9w0BAQEFASCBKcwggSjAgEAAoIBAQC93GDINPM6HX2NN3bCznyri2rDHDVcamzA&#x2F;rPDXi9Mb2hu1Ypqek4km&#x2F;kf4MKDsr<br>OU&#x2F;3T5mcdx5kA80s7mBWlGaItg&#x2F;sy6dsh2XOoKVEHcZYyrbSAbkYrT9CoLLMJlipbsalKenkW9JlHB0h+vwv&#x2F;rAwXJ9IMSc4RQkvjn&#x2F;QKuBPhcXf<br>rfaAIKNO0L+iqUL3asFM2CF8DXZXy8pLAxMy2PDJLtb0I&#x2F;rXDWRImlBcIWBrhg7lDA0UxWXDD1i5MmMlvxmyho1F8Brh7ietK3XW7LWshD2ARID<br>gPoTZ7lZm7P9JbKSN+Uk7fay6LdkJXYszfT89Owmi7tmfUQ41fcBAgMBAAGCggEAWyGJru+Dg&#x2F;Sd44t6peY4lVy3fO&#x2F;GxRz+qHeTjojX2HAkppn<br>GHM96q3XWkWYHHu&#x2F;Ets6n+msQOcIRldwx01QHp6yrJI&#x2F;CJkkLrq6yjhfu1dTWlFK+XhsQQT&#x2F;ZVq&#x2F;GBdzBF+qdHLAGnV7ZmUCqVyIipGLqbPw4VC<br>2Ltr2kUBhlDySAA+gCnUrPyVi6O9OFcyDepKMy481gZLLijakINejYrsbdCInz2omHq12w&#x2F;50tuf1s4XMWJN+A0g1Hx+tTk2jDX1Wqg&#x2F;htmJhjG<br>qTj02GLJ&#x2F;CJQjRodEdA7mx3HGwhisigeZgHTdPgP1B5Z9NXwUg9Qxln72D4mGhLCGYcw8VQKBgQD6+oltv1i44BO&#x2F;ROUJkZPTLWeoBrxP2OOli4<br>aOSilLifeGrUQOSUtvcFHOxzy5RrhvX89f3GnklXcGyH XD03wg0&#x2F;hqL0HM1EzNLmWkJW0Ng5WRFFgfcQIKbWBK9SHhAmKzkHtZPq6NwN8MbZUF<br>vndxDtcSOdH0&#x2F;TbMtCMYYs0MswKBgQDBqM7QxWT6qebCU4YOV+5uwnP+hAunsWkvVW7pHgiPnZ8ARRZ9iFIqqiVRvKeeyZBEK22eOJNguz6Cqfz<br>2451D&#x2F;AHA7sXht+1D9GCE&#x2F;ebvUw+lPNQIRKkAgwQ8Dx+R6ikaUGzUKYhmWYJ5xgS9ZALZ+k4+rSjFg9jVjFjT7xQvewKBgHo9bJI3kE77VKLkO2<br>ndrdI9Wy9LmIyLZtVKj87d8B8Ko7TEz1DmAgfU&#x2F;QNppvnWqB4W3DokcK8U3VRAbptidgLHG0ccnT&#x2F;WZ1HIN1kroWHjpQV0kzc9I3FQtIXNvyKItu<br>oehPWCwiHovrqe5OZXTnWSdM47uzdH3Vj2o+FMvfJhAoGAQvusbTGZd8oEcvqIx7VKVy0TCdmKXnpSs3iNYDxvIZ2XPXSoDst0ACXRuq&#x2F;SGm4FZ<br>E7RH4TaFP8u4+sAADVCVB16Tc1IzIXdnz+LkvRvSCAmrTSY8jMtcWvfrxZcCRBBH0TqH4guEZisNIp1YTySb+rP3YXvMEImYdalcsii5rkCgYEA<br>imnWJ5aFN3TDt3h76CL3nRQegnzekJBjXZfcrHdExkgNChWjiz+WU&#x2F;FW&#x2F;Z87xMxtfIEwwzzIQHxbKZhgzO&#x2F;Up2eXdqH59DvauggbiS3h4p9k2kx<br>WTocztaRvdftMW0ncmA4yCKiUQEmWD784JCyxOupNNfr2rgViWggVBEtJUIg&#x3D;&#x3D;<br>—–END PRIVATE KEY—–</p>
+</li>
+</ul>
+<p>在非对称加密中，公钥用于加密数据或验证签名，而私钥用于解密数据或生成签名</p>
+<p>服务器通常会将其公钥公开给客户端，以便客户端使用该公钥加密需要发送给服务器的敏感信息。所以这个client程序的publickey应该是server的</p>
+<p>开始调试，这里不得不说这个真的太难调了，很卡（），也去切换了wsl（最开始甚至还调试不了，瞎忙活半天配了个库后面终于能调了）</p>
+<p>提一些关键步骤：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334863.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>最终在return处被遣返退出调试</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334940.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334196.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>继续静态分析</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334219.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>监听端口，我们可以在这里找到accept函数</p>
+<p>![Untitled](D:\笔记\笔记2\1\暑期考核题目wp edeb07c901e84bfaa9d0beabecb339a3\Untitled 69.png)</p>
+<p>里面的connect处我们点开字符串发现这个地方是在连接端口</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334418.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334619.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>总结上面的流程就是前面部分的逻辑就是客户端连接127.0.0.1:8888端口，然后同时开启了RC4的流加密，此链路进行加密，然后开启监听12345端口(bind) ，等待连接（accept)</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334900.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>通过搜索我们可以知道 <code>process_connection</code> 负责接受来自客户端的连接请求，负责处理数据的发送和接收，例如读取客户端发送的数据并做出响应。</p>
+<p>在这里我们可以看到key_exchange以及它上方的crypto的new函数，表示开启了新的加密算法</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312334458.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335954.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>我们可以知道这个地方就是在检查密钥是否交换成功，点击进入</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335901.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>点开函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335236.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>这里的主要逻辑是先随机生成字符串（v64)并保存到restr里面，然后再通过最开始我们获得的公钥进行RSA加密得到256字节发送给server</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335436.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>与此同时程序也读取server下发的16字节随机串通过公钥加密后的256字节，采用client的私钥对server发来的256字节进行解密，解密后字节存入v23中</p>
+<p>然后使用前面client生成的16字节随机串和刚刚解密以后的server的随机串执行异或操作，得到新的密钥</p>
+<p>然后我们对刚刚生成的新的密钥进行sha256并且将结果发送给server</p>
+<p>最后进行比较</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335875.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>然后看到process_data_dec_in函数</p>
+<p>发现AES—CBC,读取内容放入下面</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335180.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>最终解密函数</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335994.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335996.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>进行RC4解密后</p>
+<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202407312335315.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="Untitled"></p>
+<p>获得数据</p>
+<p>00000008000000000000000000000008000000000000000100000048000000010000000001001db2ee547837c2b0394f9316a3c672109c854769d9627ce715aa82ae76af4fc7d468903ffa4f7c9d4afcf139528ceb24cb5f64a192287282ee7fd076992f000000480000000100000000e73f0a730b98e032e90afaf73b8ddab1e821432c3e1c2c51396914f53fb304f26cbc8f85ec68462ff85dfb0979648d43003291ccb9418e7b4016f5d3325d4083000000480000000100000000d44c5aff410f28c841fb51c2e982244d7f7370fb6b73d6e5caba56c1b4b8f96bea190aa8d66e7e37d76fe2e5fef7f78b0de90e12eefda3a36177583412ca074e00000048000000010000000096a1796af867e440a72ee81e36e05f3b73c3341f6166b804bf83c3d0b47df74cc77405595ce44d3ccfb739496b8acb78fdb02bcd510851b3e3de015fc06eadb40000000a00000001000000000f8e0000004800000001000000010100320b119809b793abf357a7f78b0742ee93a957e563a5a94fdb09804e89596f2597a2cb9ae9f5161d5fda88ff050e47b1d28bebc6563465d2e7959e8a624a000000480000000100000001cd39b2053c17021f93030e3b9bc7149ff5423faf64693932f76a8dbffa526fff7c076845b1d31967efca0b56b066e8bacedc1927e629c6d0e87f61bf14ee3039000000480000000100000001053d668ef1855426257ce68cdbc2f66919a2f9efbcb632daa6170cb8246ab7a2348032f48cefdbc3aadcee6b9ab867371346bbe90fd69d213705ed1de38922b300000048000000010000000145bbbf8e0b10c5436e5974f46426d3efdbeaba819ea5d049bb420219a426336e14bc36e5753cb71fb21a2b78f699918a0045a8badddd69646ed65a59e17feec80000000a0000000100000001b30c000000280000000100000001503fdd267309866142ae96b3197515b72ccd766dedbc09d61c25f0c3fa79ebd40000002800000001000000002accc966ccaf48a147471171fb9589c95c561100d6548ad979f328e43bcfe0750000002c00000001000000000000001023a5457e1fa2e2f4a23242b1e61a597d1458bee4871e6f44e9296820014728300000002c000000010000000100000010bd688bc8657972730f1d9a5c340cd555602957fa44cf643423bb23734bf8490b0000003c000000010000000000000020a6f95ec809bac678aa1f4a74a0094e00d33e42da057331c95a61c6b5c3cd24daefeb367e01d3765e91643e37e2ac95e90000003c000000010000000100000020184ff5940c47e4fc42a2bd1f61b304f5fdfc5e453104a3946d06c4897a86f7d2872c948ff06b270b4d024446df8b60fa0000004800000001000000000000020044f4cf64a905e470a2d8091e5320c0b8a370193fe44728340c454361c84578f3b469963d12fa608ab96bf2e8c9c2116010d50e151b6407308d3cb6a2000000480000000100000000bc02026a76b5be1d66cf03d90ea5303a5091b48d370ac186402138606da35c90fe7efb0a21f0a177896f496ba40f02e079b82218be0124ab7de5d4f48cfd921e000000480000000100000000323d2847d03880fa5cb48533939141115c3dc15fa32a82be59d78826e3d37f5cac12010ce10c850df63626f94657a5beacf7d502b59fc10f571959ce6101b8d6000000480000000100000000704e541c930ca3a8d156d7f6122fda7bbdffed9b9bc6160f4ec8ace48978bd458869a636a7d8798d7dbd503e0c41aad82496578df4fbffbd3c5c885dc0bd3dee0000004800000001000000006d6af1efc82365f1619286e7a612155d87038f4ccb39e25e0660f9f2d320ae4321996b69187ba68abdf3e6ab41abfa2dd359c7eaa5d344fc1acb97b58dd44d86000000480000000100000000d444d17c165ee78e1d55f5c42b1f1bcf9c0f302588b68d26d2a308250c42d1df13be07693aa0f42cefcb9dc1688216478a1a041c9a0c66308b3e4a5135fd2f0f0000004800000001000000002c7d9df81c7c9ccb7422089f94c0fa54067e6c4fc634c725c9aa9710aaedd671f72cf9287f38de6111ace6c0c32ed568569b45743abfc519e23aabccdf30a9af000000480000000100000000d1bbcab1224daf8ccfb5e6dbf42ee924935b990eee7abe70ac5537426236e0ff1b2ac4748c665d3aba61c4685798ae62126d89220cd5ae8c6a7c32e33ce1236d0000001c0000000100000000b802088e5e303c8389880c09c3925053cc210825000000080000000200000000000000480000000100000001000001d06fe6d3c4b7761ffea3dea5ca1b75305f3bd828925e041baabc00aa51f93e5d59aa6c5c024e1de93ccabbcc7736271de03665a2b170a42faca2e869980000004800000001000000016c6b50fecd4e0e1a9ca070fafa04c06a12f27af94d5430ccce129ada67c3040d444b772758195366025267bfea9e35cbaaf816022b34755d5ac2a4d7df857732000000480000000100000001ede0bf60b0ca23f40635dcbda76eaf3b59faa140dee0b2480aacd8df765ba5cfd1347f22c9415006210eb4f224332b5cfcac7be98e0da94f74693d8af22e1fad0000004800000001000000010614feada5c2aa494e61a0b2a848b82833860d6c1213c4aceebcbe55f419403ecd843835f14f2caa8310be6bfad7ad2054df500a54268b17530183ef4c49f1c50000004800000001000000011ed33f223e632356012a42484c1241d41ec5426ba94c0c4887a8206b86b41ac73ca8b79d90256d391190bcb2256e881642c5a0fbc178691cf9ec983e1f1db4000000004800000001000000012c5043530d28ce81e89c0a71baeb821ff0240d18fbac0e01b0952bb62b91354597b9061dc440318ce3eabd95742607546c414ebf3da32879b2af3500d08cb4e9000000480000000100000001b404a5293b85aadaa3d595d38992c219ddd7a4e5f00c09af477eea99477b3d53ac6b67c49f0cbd5a7ff038904dfc1a3b58cabe2c25dcb86fa55a53f3d362f0510000002c000000010000000128bf591667dcd1d600abe1db48f49b17a5ad9d5650f7793af7a24341b771a9247f1eb4800000000800000002000000010000000800000000000000020000000800000000000000030000004800000001000000030100abcf924576de63087c8695ccda3705e8670c770f2bfda1dafdeddcd09b2aa6d485c6a87ff31c14300ddb660576ceed52047318a30d3c05c9848b0a1fb05300000048000000010000000387d378e9cbb8914e496a633595c7f68da097afd4fbd0380b4eafe790ffe999b81ceeff32eea4d8fa4279606c7c491ec4eb4a7ef5bf614307c21bd3a314db9d2e000000480000000100000003e9f505f08c464e1f5f123bcc180305bb5a30f2c382493a1cc6d6e5e189e75950f75c8a790aef2c1fae18436c9d6f4840a9eacbf04139a2b25042c27f3a3fd756000000480000000100000003faeaff92d731e354d03dc46cbe8a001188dde35e753c259de359181678d94e47d90709345f6c9975288dbecfe1a6cf2eb7a14978854bbc73d3ac7d0a72cc3ef40000000a0000000100000003c41a0000004800000001000000020100d92f41b75bb8ced6be2fbbc0ba1cfeeebdf15826ce92ba78ef4cd0f6d47ff04e9e593cfc5fc7eac8109effce7e75f547873ab559186885edf0e519f73aed00000048000000010000000243421e08dea79fd12889b2845ca365803bb4aa23c50d0c298e6649121b6d9101f32d15a043ffdbc93e7665617fa7b4b3f01db76f5472c5aa3a085da5683efcc4000000480000000100000002bf9a240df9afc3596d4b3613ae9a2184340561c896a60cc577e6ca507b5e6548ccfcd8bccf27de73deaaf04fab707a20c6aa94febdf8a0a5532c0f4c73958e11000000480000000100000002fc1437567ccd886b5496cabb117993f31afe25f53d92721877892e472bf8bba1743b827e277f500d51b7f74f4682e943be0d3ebfdc30742e211dc3eba51dac8b0000000a00000001000000029074000000280000000100000003e836256016a5f8ca1e29732b7332d9776bdc6694a9df6c1172183f65916f83d50000002c000000010000000300000010f46cbf6896be858f5c2f86ee3c162359c545b1f5bd1eec0cd03e2b7bf9c1b4b90000003c000000010000000300000020c580aa8aad81a2800fadf74749e79c323da65a6d11e8fb517d60ba36a0113b345be7c0fce390fba664776b676d82fdbe000000480000000100000003000002002292a593b68fdbf615d43c123747cf1f1583619708368b471b4a37c8eed21e07d14a7bf309f45335592134c5cc7a18152de20bb7d2fb753bee9131d90000004800000001000000033076a9d57efa379e4f7f4700116d786c586b49523454dd9b3ae7cfde0416d9bfbb486eed31f88fec8128cd1e0bf783c8978c04fde5f1bbe67ecbe1c76e0596f5000000480000000100000003579bbdb311093c2a3bb58b848be88302ab2bb6c24bf076a694de2b2fa1a8eff53fcaa6800e938bdeee831498fcc72cc9b822dad5b2074d5bc292c766e44c13e000000048000000010000000331fffa94345676f294eceb259baa51107267136af1e829868e1a3c5e2514517bfcfaec78783afde2874c6d2f4cb8436ed421e67fe327e8c67c851da9446ef226000000480000000100000003daff3194609bf5a05c1e6ec1e085854275ee81dbee01c92e2cb357faeba811424b80bd9b204d70675aaf026f2f23bb0e882271bad34ff5294cc05cd7fc0740ac0000004800000001000000034b5b49ca009d1836cfa176112aaf7775fa8c241bd45f861c1eec34dd2b9654e8144c74c1f80c9e0f23cae4503ae85de975f74d250be667a1f6285c9951a8f8c90000004800000001000000032fb4e2dd32d6fdd7e93fe24e23b9762099e1b12f5d9cae6dae7df3401e33931a8af65803c1538716bdba05948c8818f92791010ef8d6d315fb97bccdf2c2fbbf000000480000000100000003b97cd2e80a232dcf417da8ac1b835bf9dab15816bc1e2e0c07214e531ac922ca2f5ddbb26f8d599805feb5f6ae1c6e3fe08ef5cf7dbd60eb407892d6e72a67a30000001c0000000100000003e7d781f18b675dad11f1f49600057e8094628ad00000002800000001000000024ac9c87b674dcd932d2e9d3a4b7c16a3989e750fa3a8895e8dd0971c56fb96780000002c000000010000000200000010cf6ca67cfe59cd5f110c1586de9c2186cfb7213784043ffb017fdf5cfa74ac320000003c000000010000000200000020a03a82bae4627fc74de8c75437e5b077aa3d63e5745f61f47362954b80f53ede6867267605b7383f55e6a80aefcae153000000080000000200000003</p>
+<p>参照整理数据后，如下</p>
+<p>8 0 0<br>72 1 0 01001db2ee547837c2b0394f9316a3c672109c854769d9627ce715aa82ae76af4fc7d468903ffa4f7c9d4afcf139528ceb24cb5f64a192287282ee7fd076992f<br>72 1 0 e73f0a730b98e032e90afaf73b8ddab1e821432c3e1c2c51396914f53fb304f26cbc8f85ec68462ff85dfb0979648d43003291ccb9418e7b4016f5d3325d4083<br>72 1 0 d44c5aff410f28c841fb51c2e982244d7f7370fb6b73d6e5caba56c1b4b8f96bea190aa8d66e7e37d76fe2e5fef7f78b0de90e12eefda3a36177583412ca074e<br>72 1 0 96a1796af867e440a72ee81e36e05f3b73c3341f6166b804bf83c3d0b47df74cc77405595ce44d3ccfb739496b8acb78fdb02bcd510851b3e3de015fc06eadb4<br>10 1 0 0f8e<br>40 1 0 2accc966ccaf48a147471171fb9589c95c561100d6548ad979f328e43bcfe075<br>44 1 0 0000001023a5457e1fa2e2f4a23242b1e61a597d1458bee4871e6f44e929682001472830<br>60 1 0 00000020a6f95ec809bac678aa1f4a74a0094e00d33e42da057331c95a61c6b5c3cd24daefeb367e01d3765e91643e37e2ac95e9<br>72 1 0 0000020044f4cf64a905e470a2d8091e5320c0b8a370193fe44728340c454361c84578f3b469963d12fa608ab96bf2e8c9c2116010d50e151b6407308d3cb6a2<br>72 1 0 bc02026a76b5be1d66cf03d90ea5303a5091b48d370ac186402138606da35c90fe7efb0a21f0a177896f496ba40f02e079b82218be0124ab7de5d4f48cfd921e<br>72 1 0 323d2847d03880fa5cb48533939141115c3dc15fa32a82be59d78826e3d37f5cac12010ce10c850df63626f94657a5beacf7d502b59fc10f571959ce6101b8d6<br>72 1 0 704e541c930ca3a8d156d7f6122fda7bbdffed9b9bc6160f4ec8ace48978bd458869a636a7d8798d7dbd503e0c41aad82496578df4fbffbd3c5c885dc0bd3dee<br>72 1 0 6d6af1efc82365f1619286e7a612155d87038f4ccb39e25e0660f9f2d320ae4321996b69187ba68abdf3e6ab41abfa2dd359c7eaa5d344fc1acb97b58dd44d86<br>72 1 0 d444d17c165ee78e1d55f5c42b1f1bcf9c0f302588b68d26d2a308250c42d1df13be07693aa0f42cefcb9dc1688216478a1a041c9a0c66308b3e4a5135fd2f0f<br>72 1 0 2c7d9df81c7c9ccb7422089f94c0fa54067e6c4fc634c725c9aa9710aaedd671f72cf9287f38de6111ace6c0c32ed568569b45743abfc519e23aabccdf30a9af<br>72 1 0 d1bbcab1224daf8ccfb5e6dbf42ee924935b990eee7abe70ac5537426236e0ff1b2ac4748c665d3aba61c4685798ae62126d89220cd5ae8c6a7c32e33ce1236d<br>28 1 0 b802088e5e303c8389880c09c3925053cc210825<br>8 2 0<br>8 0 1<br>72 1 1 0100320b119809b793abf357a7f78b0742ee93a957e563a5a94fdb09804e89596f2597a2cb9ae9f5161d5fda88ff050e47b1d28bebc6563465d2e7959e8a624a<br>72 1 1 cd39b2053c17021f93030e3b9bc7149ff5423faf64693932f76a8dbffa526fff7c076845b1d31967efca0b56b066e8bacedc1927e629c6d0e87f61bf14ee3039<br>72 1 1 053d668ef1855426257ce68cdbc2f66919a2f9efbcb632daa6170cb8246ab7a2348032f48cefdbc3aadcee6b9ab867371346bbe90fd69d213705ed1de38922b3<br>72 1 1 45bbbf8e0b10c5436e5974f46426d3efdbeaba819ea5d049bb420219a426336e14bc36e5753cb71fb21a2b78f699918a0045a8badddd69646ed65a59e17feec8<br>10 1 1 b30c<br>40 1 1 503fdd267309866142ae96b3197515b72ccd766dedbc09d61c25f0c3fa79ebd4<br>44 1 1 00000010bd688bc8657972730f1d9a5c340cd555602957fa44cf643423bb23734bf8490b<br>60 1 1 00000020184ff5940c47e4fc42a2bd1f61b304f5fdfc5e453104a3946d06c4897a86f7d2872c948ff06b270b4d024446df8b60fa<br>72 1 1 000001d06fe6d3c4b7761ffea3dea5ca1b75305f3bd828925e041baabc00aa51f93e5d59aa6c5c024e1de93ccabbcc7736271de03665a2b170a42faca2e86998<br>72 1 1 6c6b50fecd4e0e1a9ca070fafa04c06a12f27af94d5430ccce129ada67c3040d444b772758195366025267bfea9e35cbaaf816022b34755d5ac2a4d7df857732<br>72 1 1 ede0bf60b0ca23f40635dcbda76eaf3b59faa140dee0b2480aacd8df765ba5cfd1347f22c9415006210eb4f224332b5cfcac7be98e0da94f74693d8af22e1fad<br>72 1 1 0614feada5c2aa494e61a0b2a848b82833860d6c1213c4aceebcbe55f419403ecd843835f14f2caa8310be6bfad7ad2054df500a54268b17530183ef4c49f1c5<br>72 1 1 1ed33f223e632356012a42484c1241d41ec5426ba94c0c4887a8206b86b41ac73ca8b79d90256d391190bcb2256e881642c5a0fbc178691cf9ec983e1f1db400<br>72 1 1 2c5043530d28ce81e89c0a71baeb821ff0240d18fbac0e01b0952bb62b91354597b9061dc440318ce3eabd95742607546c414ebf3da32879b2af3500d08cb4e9<br>72 1 1 b404a5293b85aadaa3d595d38992c219ddd7a4e5f00c09af477eea99477b3d53ac6b67c49f0cbd5a7ff038904dfc1a3b58cabe2c25dcb86fa55a53f3d362f051<br>44 1 1 28bf591667dcd1d600abe1db48f49b17a5ad9d5650f7793af7a24341b771a9247f1eb480<br>8 2 1<br>8 0 2<br>72 1 2 0100d92f41b75bb8ced6be2fbbc0ba1cfeeebdf15826ce92ba78ef4cd0f6d47ff04e9e593cfc5fc7eac8109effce7e75f547873ab559186885edf0e519f73aed<br>72 1 2 43421e08dea79fd12889b2845ca365803bb4aa23c50d0c298e6649121b6d9101f32d15a043ffdbc93e7665617fa7b4b3f01db76f5472c5aa3a085da5683efcc4<br>72 1 2 bf9a240df9afc3596d4b3613ae9a2184340561c896a60cc577e6ca507b5e6548ccfcd8bccf27de73deaaf04fab707a20c6aa94febdf8a0a5532c0f4c73958e11<br>72 1 2 fc1437567ccd886b5496cabb117993f31afe25f53d92721877892e472bf8bba1743b827e277f500d51b7f74f4682e943be0d3ebfdc30742e211dc3eba51dac8b<br>10 1 2 9074<br>40 1 2 4ac9c87b674dcd932d2e9d3a4b7c16a3989e750fa3a8895e8dd0971c56fb9678<br>44 1 2 00000010cf6ca67cfe59cd5f110c1586de9c2186cfb7213784043ffb017fdf5cfa74ac32<br>60 1 2 00000020a03a82bae4627fc74de8c75437e5b077aa3d63e5745f61f47362954b80f53ede6867267605b7383f55e6a80aefcae153<br>8 0 3<br>72 1 3 0100abcf924576de63087c8695ccda3705e8670c770f2bfda1dafdeddcd09b2aa6d485c6a87ff31c14300ddb660576ceed52047318a30d3c05c9848b0a1fb053<br>72 1 3 87d378e9cbb8914e496a633595c7f68da097afd4fbd0380b4eafe790ffe999b81ceeff32eea4d8fa4279606c7c491ec4eb4a7ef5bf614307c21bd3a314db9d2e<br>72 1 3 e9f505f08c464e1f5f123bcc180305bb5a30f2c382493a1cc6d6e5e189e75950f75c8a790aef2c1fae18436c9d6f4840a9eacbf04139a2b25042c27f3a3fd756<br>72 1 3 faeaff92d731e354d03dc46cbe8a001188dde35e753c259de359181678d94e47d90709345f6c9975288dbecfe1a6cf2eb7a14978854bbc73d3ac7d0a72cc3ef4<br>10 1 3 c41a<br>40 1 3 e836256016a5f8ca1e29732b7332d9776bdc6694a9df6c1172183f65916f83d5<br>44 1 3 00000010f46cbf6896be858f5c2f86ee3c162359c545b1f5bd1eec0cd03e2b7bf9c1b4b9<br>60 1 3 00000020c580aa8aad81a2800fadf74749e79c323da65a6d11e8fb517d60ba36a0113b345be7c0fce390fba664776b676d82fdbe<br>72 1 3 000002002292a593b68fdbf615d43c123747cf1f1583619708368b471b4a37c8eed21e07d14a7bf309f45335592134c5cc7a18152de20bb7d2fb753bee9131d9<br>72 1 3 3076a9d57efa379e4f7f4700116d786c586b49523454dd9b3ae7cfde0416d9bfbb486eed31f88fec8128cd1e0bf783c8978c04fde5f1bbe67ecbe1c76e0596f5<br>72 1 3 579bbdb311093c2a3bb58b848be88302ab2bb6c24bf076a694de2b2fa1a8eff53fcaa6800e938bdeee831498fcc72cc9b822dad5b2074d5bc292c766e44c13e0<br>72 1 3 31fffa94345676f294eceb259baa51107267136af1e829868e1a3c5e2514517bfcfaec78783afde2874c6d2f4cb8436ed421e67fe327e8c67c851da9446ef226<br>72 1 3 daff3194609bf5a05c1e6ec1e085854275ee81dbee01c92e2cb357faeba811424b80bd9b204d70675aaf026f2f23bb0e882271bad34ff5294cc05cd7fc0740ac<br>72 1 3 4b5b49ca009d1836cfa176112aaf7775fa8c241bd45f861c1eec34dd2b9654e8144c74c1f80c9e0f23cae4503ae85de975f74d250be667a1f6285c9951a8f8c9<br>72 1 3 2fb4e2dd32d6fdd7e93fe24e23b9762099e1b12f5d9cae6dae7df3401e33931a8af65803c1538716bdba05948c8818f92791010ef8d6d315fb97bccdf2c2fbbf<br>72 1 3 b97cd2e80a232dcf417da8ac1b835bf9dab15816bc1e2e0c07214e531ac922ca2f5ddbb26f8d599805feb5f6ae1c6e3fe08ef5cf7dbd60eb407892d6e72a67a3<br>28 1 3 e7d781f18b675dad11f1f49600057e8094628ad0<br>8 2 3 </p>
+<p>最后整理一下思路，程序主要逻辑是</p>
+<p>从主函数分析得到最开始在server与client建立连接时server端随机数生成了16字节的密钥，然后将它与publickey公钥进行加密，加密后将数据发送给server，同时也读取server端加密数据使用client端私钥解密以后将解密数据与最开始16字节加密后生成的新数据进行异或操作，得到新的密钥来进行了SHA-256，然后server与client间会进行密钥校验过程。如果校验正确，那么最后会将数据进行AES-CBC的模式解密。</p>
+<p>如果我们要得到真正的正确发送的数据，那么我们需要获得server端生成的随机数</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/wp/" class="print-no-link">#wp</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>考核题目复现</div>
+      <div>http://example.com/2024/07/31/考核题目复现/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月31日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/07/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C++学习笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">C++学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/13/CSAPP%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="CSAPP阅读笔记第二章">
+                        <span class="hidden-mobile">CSAPP阅读笔记第二章</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
