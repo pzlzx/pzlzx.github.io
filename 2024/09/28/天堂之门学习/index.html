@@ -16,22 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="天堂之门——WoW64学习前述：之前打比赛做题的时候遇到过天堂之门的题目，当时做完感觉云里雾里的，刚好前段时间遇到队友分享天堂之门，所以打算写篇博客来记录一下 具体的参考链接：[原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com 天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com 天堂之门概念：首先，我们需">
+    <meta name="description" content="天堂之门——WoW64学习前述：之前打比赛做题的时候遇到过天堂之门的题目，当时做完感觉云里雾里的，刚好前段时间遇到队友分享天堂之门，所以打算写篇博客来记录一下 具体的参考链接：天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com [原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com 天堂之门概念：首先，我们需">
 <meta property="og:type" content="article">
 <meta property="og:title" content="天堂之门——WoW64学习">
 <meta property="og:url" content="http://example.com/2024/09/28/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="天堂之门——WoW64学习前述：之前打比赛做题的时候遇到过天堂之门的题目，当时做完感觉云里雾里的，刚好前段时间遇到队友分享天堂之门，所以打算写篇博客来记录一下 具体的参考链接：[原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com 天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com 天堂之门概念：首先，我们需">
+<meta property="og:description" content="天堂之门——WoW64学习前述：之前打比赛做题的时候遇到过天堂之门的题目，当时做完感觉云里雾里的，刚好前段时间遇到队友分享天堂之门，所以打算写篇博客来记录一下 具体的参考链接：天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com [原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com 天堂之门概念：首先，我们需">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409271625019.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409271630902.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409282045156.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409272011165.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409282103818.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409282056268.png">
 <meta property="og:image" content="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409282058387.png">
 <meta property="article:published_time" content="2024-09-28T13:11:26.662Z">
-<meta property="article:modified_time" content="2024-09-28T13:10:40.226Z">
+<meta property="article:modified_time" content="2024-09-28T13:15:12.465Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="RE">
 <meta name="twitter:card" content="summary_large_image">
@@ -307,8 +306,8 @@
               <div class="markdown-body">
                 
                 <h1 id="天堂之门——WoW64学习"><a href="#天堂之门——WoW64学习" class="headerlink" title="天堂之门——WoW64学习"></a>天堂之门——WoW64学习</h1><h2 id="前述："><a href="#前述：" class="headerlink" title="前述："></a>前述：</h2><p>之前打比赛做题的时候遇到过天堂之门的题目，当时做完感觉云里雾里的，刚好前段时间遇到队友分享天堂之门，所以打算写篇博客来记录一下</p>
-<p>具体的参考链接：[<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-280974.htm">原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com</a></p>
-<p><a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-283564.htm">天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com</a></p>
+<p>具体的参考链接：<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-283564.htm">天堂之门(WoW64技术)总结及CTF中的分析-CTF对抗-看雪-安全社区|安全招聘|kanxue.com</a></p>
+<p>[<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-280974.htm">原创]天堂之门-调试器的末路-软件逆向-看雪-安全社区|安全招聘|kanxue.com</a></p>
 <h2 id="天堂之门概念："><a href="#天堂之门概念：" class="headerlink" title="天堂之门概念："></a>天堂之门概念：</h2><p>首先，我们需要了解什么是天堂之门。</p>
 <p>其实天堂之门是指在计算机体系结构中实现从一种模式切换到另一种模式。例如，在早期的操作系统中，从实模式（real mode）切换到保护模式（protected mode），或者在某些嵌入式系统中从用户模式切换到内核模式。这种切换通常涉及到处理器状态的改变，例如段寄存器（Segment Registers）的修改等。</p>
 <p>而现在我们涉及到的天堂之门往往指从32位模式到64位模式，比如32位的程序在64位操作系统上运行。</p>
@@ -336,7 +335,6 @@
 <p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409271625019.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240927162526895"></p>
 <p>直接看汇编</p>
 <p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409271630902.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="image-20240927163052843"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/pzlzx/tuchuang@main/main/202409282045156.png" srcset="/\img\A008779F61D12BE23A64C76080892F5C.jpg" lazyload alt="PITJ8S$PS94GX(_)XOGZ}JL"></p>
 <p>在0040124E处我们可以看到</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">EA</span>    <span class="hljs-number">58</span> <span class="hljs-number">12</span> <span class="hljs-number">40</span> <span class="hljs-number">00</span>     <span class="hljs-number">33</span> <span class="hljs-number">00</span>                    jmp     far ptr loc_401587+<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
